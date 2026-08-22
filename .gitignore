@@ -1,3 +1,10 @@
 _sizetest.txt
 *.bak-*
 .fuse_hidden*
+push-log.txt
+deploy-log.txt
+push-tanach.bat
+preview-tanach.bat
+_design-demo.html
+desktop.ini
+Thumbs.db

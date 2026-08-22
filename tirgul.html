@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>תרגול אינטראקטיבי – בסגנון המבדק</title>
+<title>תרגול – שאלות בסגנון המבדק, לפי סדר כרונולוגי</title>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="psycho-components.css">
@@ -12,21 +12,25 @@
 <body>
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand__logo">ת</span>
-      <span class="brand__name">מאגר מבדק תנ״ך<small>כיתה ו' · תנופה תשפ"ו</small></span>
+      <span class="brand__name">מבדק תנ"ך<small>כיתה ו' · תנופה תשפ"ז</small></span>
     </a>
     <nav class="nav">
-      <a href="index.html">בית</a>
-      <a href="matzeget.html">על המבדק</a>
-      <a href="nosim.html">נושאים וסיכומים</a>
+      <a href="./">בית</a>
+      <a href="tochniot.html">תכניות לימודים</a>
+      <a href="morim.html">מערכי שיעור</a>
+      <a href="nosim.html">נושאים</a>
+      <a href="ezrim.html">עזרי הוראה</a>
       <a href="tirgul.html" class="active">תרגול</a>
-      <a href="zman.html">ציר זמן</a>
-      <a href="morim.html">אזור מורה</a>
       <a href="mekorot.html">מקורות</a>
     </nav>
   </div>
 </header>
+<nav class="crumbs" aria-label="פירורי לחם">
+  <a href="./">בית</a><span>›</span><span class="crumbs__cur">תרגול</span>
+</nav>
+
 
 <main>
   <div class="page-head page-head--center container">
@@ -36,24 +40,26 @@
 
   <div class="tabbar" id="topicTabs">
     <div class="tabbar__inner">
-      <button class="tab" data-target="u1">חוקים חברתיים</button>
-      <button class="tab" data-target="u2">חלומות יוסף</button>
-      <button class="tab" data-target="shneim">שניים וחצי השבטים</button>
-      <button class="tab" data-target="kibush">כיבוש הארץ</button>
-      <button class="tab" data-target="shoftim">שופטים</button>
-      <button class="tab" data-target="u3">בקיאות</button>
-      <button class="tab" data-target="avot">האבות</button>
-      <button class="tab" data-target="mitzrayim">יציאת מצרים</button>
-      <button class="tab" data-target="lang">לשון</button>
-      <button class="tab" data-target="sifrut">אמצעים ספרותיים</button>
-      <button class="tab" data-target="mapa">מפות</button>
+      <button class="tab" data-target="briaa"><span class="tab__t">בריאת העולם <span class="tab__n">0</span></span><span class="tab__book">(ספר בראשית)</span></button>
+      <button class="tab" data-target="noach"><span class="tab__t">נח והמבול <span class="tab__n">0</span></span><span class="tab__book">(ספר בראשית)</span></button>
+      <button class="tab" data-target="avot"><span class="tab__t">האבות והאמהות <span class="tab__n">35</span></span><span class="tab__book">(ספר בראשית)</span></button>
+      <button class="tab" data-target="u2"><span class="tab__t">יוסף <span class="tab__n">32</span></span><span class="tab__book">(ספר בראשית)</span></button>
+      <button class="tab" data-target="mitzrayim"><span class="tab__t">משה ויציאת מצרים <span class="tab__n">31</span></span><span class="tab__book">(ספר שמות)</span></button>
+      <button class="tab" data-target="sinai"><span class="tab__t">מעמד הר סיני ועשרת הדיברות <span class="tab__n">0</span></span><span class="tab__book">(ספר שמות)</span></button>
+      <button class="tab" data-target="u1"><span class="tab__t">חוקים חברתיים ומוסריים <span class="tab__n">38</span></span><span class="tab__book">(ספר ויקרא)</span></button>
+      <button class="tab" data-target="midbar"><span class="tab__t">הנדודים במדבר <span class="tab__n">0</span></span><span class="tab__book">(ספר במדבר)</span></button>
+      <button class="tab" data-target="neumim"><span class="tab__t">נאומים היסטוריים <span class="tab__n">0</span></span><span class="tab__book">(ספר דברים)</span></button>
+      <button class="tab" data-target="kibush"><span class="tab__t">כיבוש הארץ וחלוקת הנחלות <span class="tab__n">65</span></span><span class="tab__book">(ספר יהושע)</span></button>
+      <button class="tab" data-target="shoftim"><span class="tab__t">תקופת השופטים <span class="tab__n">36</span></span><span class="tab__book">(ספר שופטים)</span></button>
+      <button class="tab" data-target="u3"><span class="tab__t">בקיאות <span class="tab__n">89</span></span><span class="tab__book">(כל הספרים)</span></button>
+      <button class="tab" data-target="lang"><span class="tab__t">לשון ואמצעים ספרותיים <span class="tab__n">42</span></span><span class="tab__book">(כל הספרים)</span></button>
     </div>
   </div>
 
   <section class="section">
     <div class="section__inner" id="topicHost">
       <!-- ===== יחידה 1 ===== -->
-      <h2 class="section__title" id="u1" style="margin-top:18px"><span class="pill pill--accent">חוקים חברתיים</span> ויקרא י״ט · מתוך נושאי הלימוד (ה'–ו')</h2>
+      <h2 class="section__title" id="u1" style="margin-top:18px"><span class="section__kicker">חוקים חברתיים ומוסריים</span> ויקרא י״ט · מתוך נושאי הלימוד (ה'–ו')</h2>
 
       <div class="quiz is-official" data-type="mc" data-explain="שני החוקים עוסקים ביושר ובאמינות — להימנע משקר, מהכחשה ומגנֵבה. הערך המשותף הוא יושר.">
         <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">רב-ברירה</span></div>
@@ -523,7 +529,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="shoftim" style="margin-top:8px"><span class="pill pill--accent">שופטים</span> תקופת השופטים — דבורה, גדעון, שמשון</h2>
+      <h2 class="section__title" id="shoftim" style="margin-top:8px"><span class="section__kicker">תקופת השופטים</span> תקופת השופטים — דבורה, גדעון, שמשון</h2>
       <p class="muted" style="margin:0 0 6px">נושא מרכזי בכיתה ו' שלא הופיע בדוגמה הרשמית — כל השאלות חוברו באותו סגנון ורמה, לפי תכנית הלימודים ומערכי 929.</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="המעגל: העם חוטא ← אויב משעבד (עונש) ← העם זועק ← ה' מקים שופט שמושיע (הצלה).">
@@ -949,7 +955,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="kibush" style="margin-top:8px"><span class="pill pill--accent">כיבוש הארץ</span> ספר יהושע — רחב, הירדן, יריחו והעי</h2>
+      <h2 class="section__title" id="kibush" style="margin-top:8px"><span class="section__kicker">כיבוש הארץ וחלוקת הנחלות</span> ספר יהושע — רחב, הירדן, יריחו והעי</h2>
       <p class="muted" style="margin:0 0 6px">נושא מרכזי בכיתה ו' שלא הופיע בדוגמה הרשמית — כל השאלות חוברו באותו סגנון ורמה, לפי תכנית הלימודים ומערכי 929.</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="רחב, אישה מיריחו, הסתירה את שני המרגלים ששלח יהושע, ובזכות זה ניצלה היא ומשפחתה בכיבוש העיר (יהושע ב').">
@@ -1391,7 +1397,304 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="u2" style="margin-top:8px"><span class="pill pill--accent">חלומות יוסף</span> בראשית ל״ז · עיון בתורה</h2>
+      <h2 class="section__title" id="shneim-sub" style="margin-top:38px">שניים וחצי השבטים · במדבר ל״ב ויהושע א'</h2>
+      <div class="qverse"><span class="ref">יהושע א', י״ב–ט״ז</span>וְלָראוּבֵנִי וְלַגָּדִי וְלַחֲצִי שֵׁבֶט הַמְנַשֶּׁה אָמַר יְהוֹשֻׁעַ לֵאמֹר: …נְשֵׁיכֶם טַפְּכֶם וּמִקְנֵיכֶם יֵשְׁבוּ בָּאָרֶץ אֲשֶׁר נָתַן לָכֶם מֹשֶׁה בְּעֵבֶר הַיַּרְדֵּן, וְאַתֶּם תַּעַבְרוּ חֲמֻשִׁים לִפְנֵי אֲחֵיכֶם כֹּל גִּבּוֹרֵי הַחַיִל, וַעֲזַרְתֶּם אוֹתָם. עַד אֲשֶׁר יָנִיחַ ה' לַאֲחֵיכֶם כָּכֶם וְיָרְשׁוּ גַם הֵמָּה אֶת הָאָרֶץ… וְשַׁבְתֶּם לְאֶרֶץ יְרֻשַּׁתְכֶם… וַיַּעֲנוּ אֶת יְהוֹשֻׁעַ לֵאמֹר: כֹּל אֲשֶׁר צִוִּיתָנוּ נַעֲשֶׂה, וְאֶל כׇּל אֲשֶׁר תִּשְׁלָחֵנוּ נֵלֵךְ.</div>
+
+      <div class="quiz is-official" data-type="mc" data-explain="התנאי היה לעבור חלוצים לפני אחיהם ולעזור בכיבוש; רק אחרי שכל השבטים ינוחו ויקבלו נחלה — יחזרו (פסוקים י״ד–ט״ו).">
+        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">רב-ברירה</span></div>
+        <p class="quiz__q">מתי יוכלו שניים וחצי השבטים לחזור אל משפחותיהם ואל נחלתם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="חציית הירדן בלבד לא הספיקה — נדרש שכל השבטים יסיימו לכבוש את הארץ ויקבלו נחלה.">אחרי שיחצו את הירדן וייכנסו לארץ</div>
+          <div class="opt" data-correct="true">אחרי שיכבשו את הארץ וכל השבטים יקבלו נחלה</div>
+          <div class="opt" data-correct="false" data-why="זמן קבוע של שנה לא נזכר בתנאי — התנאי היה הישגי: כיבוש הארץ וחלוקת הנחלות.">אחרי שתעבור שנה</div>
+          <div class="opt" data-correct="false" data-why="כניסה ליריחו בלבד לא הייתה התנאי — כיבוש יריחו הוא אחד השלבים, לא סיום הכיבוש כולו.">אחרי שייכנסו אל יריחו</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-official" data-type="open-check"
+        data-points="ראובן::ראובן;;גד::גד;;מנשה::מנשה;;עבר הירדן המזרחי::עבר הירדן|מזרח הירדן|עבר ירדן|מזרחי">
+        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">השלימו על-פי הפסוקים: יהושע פונה אל שבט ___, שבט ___ וחצי שבט ___. שבטים אלו התיישבו ב___.</p>
+        <textarea placeholder="כתבו את שלושת השבטים והמקום..."></textarea>
+        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
+        <div class="feedback"></div>
+        <details class="model"><summary>הצגת התשובות</summary><p>שבט <b>רְאוּבֵן</b>, שבט <b>גָּד</b> וחצי שבט <b>מְנַשֶּׁה</b>. התיישבו ב<b>עֵבֶר הירדן המזרחי</b>.</p></details>
+      </div>
+
+      <div class="quiz is-official" data-type="open-check"
+        data-points="לעבור חלוצים/חמושים לפני אחיהם::חלוצים|חמושים|לפני אחיהם|לפני העם;;לעזור בכיבוש הארץ::לעזור|עזרה|לכבוש|כיבוש|להילחם|נלחם">
+        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">פתוחה</span></div>
+        <p class="quiz__q">לפי פסוקים י״ג–י״ד, איזה תנאי מזכיר להם יהושע — תנאי שהציב משה — כדי שיוכלו להישאר בנחלה שביקשו?</p>
+        <textarea placeholder="כתבו את תשובתכם כאן..."></textarea>
+        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
+        <div class="feedback"></div>
+        <details class="model"><summary>הצגת תשובה</summary><p>שיעברו <b>חֲלוּצִים (חמושים) לפני אחיהם</b> את הירדן, ויעזרו לשאר השבטים לכבוש את הארץ — ורק אז יחזרו לנחלתם.</p></details>
+      </div>
+
+      <div class="quiz is-official" data-type="fill" data-answer="חמושים|חמשים|ועזרתם|עזרתם|חלוצים" data-explain="המילה “חֲמֻשִׁים” (“וְאַתֶּם תַּעַבְרוּ חֲמֻשִׁים לִפְנֵי אֲחֵיכֶם”), או הפועל “וַעֲזַרְתֶּם”, מדגישה את ההתחייבות לעזור לאחיהם.">
+        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">פתוחה · לשון</span></div>
+        <p class="quiz__q">איזו מילה בפסוקים י״ד–ט״ו מדגישה את המחויבות של שניים וחצי השבטים כלפי יתר השבטים? (כתבו מילה אחת)</p>
+        <input type="text" placeholder="מילה אחת...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-official" data-type="open-check"
+        data-points="לעזור לאחרים::לעזור|עזרה|נעזור|עוזרים|לסייע|לחשוב על אחרים|אכפת;;ערבות הדדית / אחדות::ערבות|אחדות|ביחד|הדדית|כולם|חברים|אחד את השני;;גם כשלי כבר טוב / לא רק על עצמי::גם אם|למרות|כבר יש|אצלי טוב|קיבלתי|רק על עצמ|לא רק">
+        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">ערכים · מסר</span></div>
+        <p class="quiz__q">לפי המסר העולה מהסיפור על שניים וחצי השבטים — כיצד הילדים צריכים לפעול? הסבירו לפי הסיפור המקראי.</p>
+        <textarea placeholder="כתבו את תשובתכם כאן..."></textarea>
+        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
+        <div class="feedback"></div>
+        <details class="model"><summary>הצגת תשובה לדוגמה</summary><p>גם כשמשהו כבר “מסודר” אצלי, חשוב לעזור לאחרים עד שגם להם יהיה טוב — כמו השבטים שקיבלו נחלה אך התחייבו לעזור לאחיהם לכבוש את הארץ לפני שחזרו הביתה. ערך הערבות ההדדית והאחדות.</p></details>
+      </div>
+
+      <!-- ===== יחידה 3 ===== -->
+
+
+      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים שקיבלו נחלה בעבר הירדן המזרחי הם ראובן, גד וחצי שבט מנשה. הם קיבלו אותה כבר בימי משה, לפני הכניסה לארץ (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
+        <p class="quiz__q">אילו שלושה שבטים קיבלו את נחלתם בעבר הירדן המזרחי, עוד לפני הכניסה לארץ?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="שמעון לא קיבל נחלה בעבר הירדן המזרחי — שמעון קיבל נחלה בדרום ארץ ישראל בתוך נחלת יהודה.">ראובן, שמעון וגד</div>
+          <div class="opt" data-correct="false" data-why="יהודה לא קיבל נחלה בעבר הירדן המזרחי — נחלת יהודה הייתה בדרום ארץ כנען.">יהודה, גד וחצי שבט מנשה</div>
+          <div class="opt" data-correct="true">ראובן, גד וחצי שבט מנשה</div>
+          <div class="opt" data-correct="false" data-why="לוי לא קיבל נחלה כלל, לא בעבר הירדן ולא בארץ כנען — הלוויים קיבלו ערים פזורות.">ראובן, גד ולוי</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="נחלת ראובן, גד וחצי שבט מנשה הייתה בעבר הירדן המזרחי — כלומר מזרחית לנהר הירדן, מחוץ לארץ כנען (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
+        <p class="quiz__q">היכן נמצאת נחלת שלושת השבטים — ראובן, גד וחצי שבט מנשה?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הגליל נמצא בצפון ארץ ישראל המערבית — נחלת שלושת השבטים הייתה מזרחית לירדן.">בצפון ארץ ישראל, ליד הגליל</div>
+          <div class="opt" data-correct="true">בעבר הירדן המזרחי</div>
+          <div class="opt" data-correct="false" data-why="הנגב נמצא בדרום ארץ ישראל המערבית — שלושת השבטים קיבלו נחלה בעבר הירדן המזרחי.">בנגב, דרום ארץ ישראל</div>
+          <div class="opt" data-correct="false" data-why="ים המלח נמצא בגבול ארץ ישראל המערבית — נחלת שלושת השבטים הייתה בעבר הירדן המזרחי.">ליד ים המלח, בדרום מערב</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="יהושע הזכיר לשלושת השבטים את תנאי משה: עליהם לעבור חלוצים לפני אחיהם ולעזור להם לכבוש את הארץ. רק לאחר מכן יוכלו לחזור לנחלתם (יהושע א' י״ב–טו).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
+        <p class="quiz__q">מה ציווה יהושע על שלושת השבטים לפני חציית הירדן?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יהושע לא ציווה עליהם להישאר — להיפך, ציווה שהגברים יעברו חלוצים לפני אחיהם.">להישאר ולשמור על נשיהם וטפם בנחלתם</div>
+          <div class="opt" data-correct="false" data-why="שלושת השבטים לא נשלחו כמרגלים — המרגלים היו שניים שנשלחו ליריחו בנפרד.">לשלוח מרגלים לכנען לפני כולם</div>
+          <div class="opt" data-correct="true">לעבור חלוצים לפני אחיהם ולעזור להם לכבוש את הארץ</div>
+          <div class="opt" data-correct="false" data-why="בניית מזבח לפני היציאה לא מוזכרת בציווי יהושע — יהושע ציווה על מעבר חלוצים.">לבנות מזבח בעבר הירדן לפני היציאה</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים ענו ליהושע: ׳ככל אשר שמענו אל משה כן נשמע אליך׳ — הם הביעו נאמנות מלאה ליהושע כפי שנאמנו למשה (יהושע א' ט״ז–יח).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · פסוק</span></div>
+        <p class="quiz__q">כאשר יהושע פקד על שלושת השבטים לעזור בכיבוש הארץ, מה הייתה תשובתם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="׳נעשה ונשמע׳ הוא ביטוי מקבלת התורה בסיני — שלושת השבטים לא השתמשו בניסוח זה.">׳נעשה ונשמע׳</div>
+          <div class="opt" data-correct="false" data-why="׳כל אשר תדבר אלינו נעשה׳ דומה לניסוח קבלת התורה, אך הציטוט המדויק מיהושע א׳ הוא ׳ככל אשר שמענו אל משה כן נשמע אליך׳.">׳כל אשר תדבר אלינו נעשה׳</div>
+          <div class="opt" data-correct="true">׳ככל אשר שמענו אל משה כן נשמע אליך׳</div>
+          <div class="opt" data-correct="false" data-why="׳ה׳ אלהינו ה׳ אחד׳ הוא פסוק קריאת שמע — הוא לא קשור לתשובת שלושת השבטים ליהושע.">׳ה׳ אלהינו ה׳ אחד׳</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="המילה ׳חלוצים׳ מתארת את שלושת השבטים שנדרשו לעבור חמושים ומוכנים לקרב לפני שאר שבטי ישראל, כהוכחת ערבות הדדית (יהושע א' י״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · פסוק</span></div>
+        <p class="quiz__q">המילה ׳חלוצים׳ בפרשת שלושת השבטים מתארת:</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="שחייה לא קשורה למילה ׳חלוצים׳ — חלוצים הם לוחמים חמושים, לא שוחים.">אנשים שחצו את הירדן בשחייה</div>
+          <div class="opt" data-correct="false" data-why="מרגלים הם בני אדם ששולחים לתור בסתר — חלוצים הם לוחמים שעוברים בראש הצבא.">מרגלים שנשלחו לתור את הארץ</div>
+          <div class="opt" data-correct="true">לוחמים חמושים שעוברים לפני שאר השבטים</div>
+          <div class="opt" data-correct="false" data-why="כוהנים נושאי הארון היו קבוצה אחרת בחציית הירדן — המילה ׳חלוצים׳ מתארת לוחמים חמושים.">כוהנים הנושאים את ארון הברית</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="ראובן|שבט ראובן" data-explain="שלושת השבטים שקיבלו נחלה בעבר הירדן הם ראובן, גד וחצי שבט מנשה. שבט ראובן הוא הבכור בין בני יעקב (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">שלושת השבטים שנחלתם בעבר הירדן הם: ______, גד, וחצי שבט מנשה.</p>
+        <input type="text" placeholder="כתבו את התשובה...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="נשי שלושת השבטים, ילדיהם ומקניהם נשארו בעבר הירדן בזמן שהגברים יצאו לכבוש את הארץ עם שאר השבטים (יהושע א' י״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
+        <p class="quiz__q">מה קרה לנשים, לילדים ולמקנה של שלושת השבטים בזמן שהגברים יצאו לכבוש את הארץ?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הנשים, הילדים והמקנה לא עברו את הירדן — רק הגברים הכשירים לצבא עברו חלוצים.">הם עברו יחד עם הגברים את הירדן</div>
+          <div class="opt" data-correct="true">נשארו בעבר הירדן המזרחי בנחלה שקיבלו</div>
+          <div class="opt" data-correct="false" data-why="מדבר סיני לא מוזכר בהקשר זה — המשפחות נשארו בנחלה שקיבלו בעבר הירדן המזרחי.">נסעו לגור בערי מדבר סיני</div>
+          <div class="opt" data-correct="false" data-why="שדות מואב היו מחנה ישראל לפני הכניסה לארץ — אבל נשי שלושת השבטים נשארו בנחלתם בעבר הירדן.">שהו במחנה בשדות מואב</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="ערך הערבות ההדדית בא לידי ביטוי כאשר שלושת השבטים, אף שכבר קיבלו נחלה, אינם מנצלים את זכותם ומחויבים לעזור לאחיהם לכבוש את ארצם לפני שהם חוזרים הביתה.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
+        <p class="quiz__q">איזה ערך מרכזי מלמדת אותנו התנהגותם של שלושת השבטים שהסכימו לעזור לאחיהם לכבוש את הארץ?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="השבטים לא דאגו רק לעצמם — הם דחו את חזרתם הביתה כדי לסייע לאחיהם, וזו הדגמה של ערבות הדדית ולא עצמאות.">עצמאות — כל שבט דואג לעצמו</div>
+          <div class="opt" data-correct="false" data-why="הסיפור עוסק בעזרה לאחים-שבטים שאינם זרים, ולא בהכנסת אורחים לאנשים זרים.">הכנסת אורחים לזרים</div>
+          <div class="opt" data-correct="true">ערבות הדדית — כל ישראל אחראים זה לזה</div>
+          <div class="opt" data-correct="false" data-why="השבטים לא ציתו מחשש לעונש אלא מתוך מחויבות לערבות הדדית — הם קיבלו על עצמם זאת מרצון.">ציות עיוור לשלטון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="לפי יהושע א', שלושת השבטים יוכלו לחזור לנחלתם רק לאחר שכל שבטי ישראל ינוחו וירשו את נחלתם בארץ כנען (יהושע א' ט״ו).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
+        <p class="quiz__q">מה צריך לקרות כדי ששלושת השבטים יוכלו לחזור לנחלתם בעבר הירדן?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הכתוב אינו מציין שהיה צריך אישור של יהושע; התנאי הקבוע הוא שכל ישראל ינוחו בנחלתם.">כאשר יהושע יאשר להם לחזור</div>
+          <div class="opt" data-correct="false" data-why="לא נזכר בתנ״ך כל מגבלה של שלוש שנים; התנאי הוא השגת מנוחה לכל השבטים, ולא לוח-זמנים קבוע.">לאחר שיעברו שלוש שנים בכנען</div>
+          <div class="opt" data-correct="true">לאחר שכל שבטי ישראל ינוחו וירשו את נחלתם</div>
+          <div class="opt" data-correct="false" data-why="כיבוש יריחו בלבד אינו מספיק — יהושע א' קובע שהתנאי הוא שכל שבטי ישראל ינוחו וירשו, לא רק ניצחון אחד.">כאשר הם יכבשו את יריחו</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="חצי שבט מנשה קיבל נחלה בעבר הירדן. החצי השני של שבט מנשה קיבל נחלה בתוך ארץ כנען, מערבית לירדן. כך השבט פוצל לשני צדדים של הנהר.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
+        <p class="quiz__q">מדוע אנו אומרים "חצי שבט מנשה" ולא "שבט מנשה" כשמונים את השבטים בעבר הירדן?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="לא מת חצי שבט מנשה במדבר; השבט פוצל לשני חלקים שקיבלו נחלות בצדדים שונים של הירדן.">כי חצי השבט מת במדבר</div>
+          <div class="opt" data-correct="true">כי החצי השני של שבט מנשה קיבל נחלה בתוך ארץ כנען</div>
+          <div class="opt" data-correct="false" data-why="החצי השני של מנשה לא הצטרף לאפרים; הוא קיבל נחלה עצמאית בתוך ארץ כנען, מערבית לירדן.">כי החצי הנוסף הצטרף לשבט אפרים</div>
+          <div class="opt" data-correct="false" data-why="חלוקת שבט מנשה לא הייתה עונש ממשה אלא תוצאה של בחירת חצי השבט להתנחל בעבר הירדן.">כי משה חילק את השבט כעונש</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="מנשה|חצי שבט מנשה|חצי מנשה" data-explain="שלושת השבטים שנחלתם בעבר הירדן הם ראובן, גד וחצי שבט מנשה. חצי שבט מנשה הוא השלישי ברשימה (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">שלושת השבטים שנחלתם בעבר הירדן הם: ראובן, גד, וחצי שבט ______.</p>
+        <input type="text" placeholder="כתבו את התשובה...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="ההתחייבות של שלושת השבטים כוללת שתי נקודות עיקריות: לעבור חלוצים לפני אחיהם, ולא לחזור לבתיהם עד שכל ישראל ינוחו בנחלתם. זוהי דוגמה לנאמנות להתחייבות.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
+        <p class="quiz__q">מה מלמד אותנו הסיפור על כך ששלושת השבטים לא חזרו הביתה מיד לאחר שקיבלו את נחלתם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="אין שום רמז בתנ״ך שהשבטים לא אהבו את נחלתם; הם ביקשו אותה בעצמם ואהבו את אדמת עבר הירדן.">שהם לא אהבו את נחלתם בעבר הירדן</div>
+          <div class="opt" data-correct="false" data-why="התנ״ך לא מזכיר המתנה לגדילת ילדים; הסיבה לאי-החזרה הייתה קיום ההתחייבות לעזור לאחיהם.">שחיכו שיגדלו ילדיהם לפני שחוזרים</div>
+          <div class="opt" data-correct="true">שנאמנות להתחייבות חשובה יותר מנוחיות אישית</div>
+          <div class="opt" data-correct="false" data-why="לא יהושע הוא שמנע את חזרתם — הם עצמם נשארו מתוך נאמנות להתחייבות שנטלו על עצמם.">שיהושע לא נתן להם רשות לחזור</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="כאשר יהושע פנה לשלושת השבטים, הוא הזכיר להם את אשר ציווה משה — כלומר יהושע פעל בהמשך למשה ולא שינה את ההסכם שנקבע (יהושע א' י״ג).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
+        <p class="quiz__q">כשיהושע פנה לשלושת השבטים לגבי חובתם לעזור בכיבוש הארץ, על מי הוא הסתמך?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יהושע לא הסתמך על החלטת הזקנים אלא על ציווי משה שנמסר לשלושת השבטים עוד לפני מותו.">על החלטת הזקנים של ישראל</div>
+          <div class="opt" data-correct="true">על הציווי שנתן משה לשלושת השבטים</div>
+          <div class="opt" data-correct="false" data-why="יהושע לא הסתמך על הבטחה שנתן בעצמו אלא על ציווי משה — הוא הזכיר שמשה הוא שצווה אותם.">על הבטחה שנתן בעצמו לפני עברו</div>
+          <div class="opt" data-correct="false" data-why="לא נפל גורל בנושא זה; ההחלטה נקבעה בציווי מפורש של משה, ולא בהגרלה.">על הגורל שנפל לשלושת השבטים</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים קיבלו את נחלתם כבר בימי משה, עוד לפני מות משה ולפני הכניסה לארץ כנען. יהושע א' מזכיר זאת כרקע לדרישה מהם להמשיך לעזור לאחיהם.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
+        <p class="quiz__q">מתי קיבלו ראובן, גד וחצי שבט מנשה את נחלתם — לפני כניסת ישראל לארץ כנען, או אחריה?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="שלושת השבטים לא קיבלו נחלה לאחר כניסת כל השבטים; הם קיבלו אותה כבר בימי משה, לפני הכניסה.">אחרי שכל השבטים נכנסו לארץ</div>
+          <div class="opt" data-correct="true">לפני הכניסה לארץ, כבר בימי משה</div>
+          <div class="opt" data-correct="false" data-why="כיבוש יריחו היה לאחר הכניסה לארץ; שלושת השבטים כבר קיבלו נחלה עוד בתקופת משה.">בזמן כיבוש יריחו</div>
+          <div class="opt" data-correct="false" data-why="נחלתם ניתנה בימי משה, הרבה לפני מות יהושע; לאחר מות יהושע היה זה שלב מאוחר בהרבה בהיסטוריה.">לאחר מות יהושע</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים הביעו נאמנות מלאה ליהושע ואפילו הוסיפו: כל מי שימרה את פיו — יומת. זה מראה שהם קיבלו את סמכות יהושע במלואה (יהושע א' י״ח).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
+        <p class="quiz__q">בנוסף לציות ליהושע, מה עוד אמרו שלושת השבטים לגבי מי שימרה את פיו?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="עונש של גירוש לעשר שנים אינו מופיע בכתוב; העונש שהזכירו השבטים היה מוות.">שיגורש מהמחנה לעשר שנים</div>
+          <div class="opt" data-correct="false" data-why="אובדן חלק בנחלה אינו העונש שנקבע בכתוב; השבטים אמרו במפורש שהממרה יומת.">שיאבד את חלקו בנחלה</div>
+          <div class="opt" data-correct="true">שיומת — כל מי שימרה את פי יהושע</div>
+          <div class="opt" data-correct="false" data-why="ענישה בשוטים על-ידי הזקנים אינה מוזכרת כאן; הטקסט אומר שמי שימרה יומת.">שייענש בשוטים על-ידי הזקנים</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="3|שלושה|שלוש" data-explain="השבטים שנחלתם בעבר הירדן הם ראובן, גד וחצי שבט מנשה — סך הכל שלושה (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">כמה שבטים (כולל חצי שבט) קיבלו נחלה בעבר הירדן המזרחי? ______</p>
+        <input type="text" placeholder="כתבו את התשובה...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="׳כל ישראל ערבים זה לזה׳ — עיקרון זה בא לידי ביטוי בסיפור שני וחצי השבטים: אף שהם כבר קיבלו נחלה, הם אינם מנתקים את עצמם משאר העם אלא עוזרים לאחיהם עד לסיום הכיבוש.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
+        <p class="quiz__q">המשפט "כל ישראל ערבים זה לזה" קשור לסיפור שלושת השבטים כי:</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="שמירה זה על זה בקרב היא דוגמה לאחווה קרבית, אך אינה הסיבה הישירה לקשר עם ״כל ישראל ערבים זה לזה״ בסיפור זה.">הם שמרו זה על זה בקרב</div>
+          <div class="opt" data-correct="false" data-why="תשלום כופר לשבויים אינו מוזכר בסיפור שלושת השבטים; הקשר לערבות הדדית הוא עזרה בכיבוש הארץ.">הם שילמו זה בעד זה כשנפלו בשבי</div>
+          <div class="opt" data-correct="true">הם עזבו את נחלתם ועזרו לאחיהם לכבוש את ארצם, למרות שכבר היה להם מקום</div>
+          <div class="opt" data-correct="false" data-why="השבטים לא שיתפו את נחלתם עם שבטים אחרים; הם עזרו בכיבוש הארץ ולאחר מכן חזרו לנחלתם שלהם.">הם שיתפו את נחלתם עם שבטים אחרים</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים שעברו חלוצים יצאו עם שאר ישראל כלוחמים. נשיהם, ילדיהם ובהמותיהם נשארו בעבר הירדן כי לא היה צורך שכולם יעברו (יהושע א' י״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
+        <p class="quiz__q">מי מבין שלושת השבטים עבר את הירדן לסייע בכיבוש הארץ?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="נשיהם, ילדיהם ובהמותיהם נשארו בנחלה; רק הגברים הלוחמים עברו את הירדן חלוצים.">כל בני השבטים — גברים, נשים וילדים</div>
+          <div class="opt" data-correct="true">הגברים הלוחמים בלבד — הנשים והטף נשארו בנחלה</div>
+          <div class="opt" data-correct="false" data-why="לא הזקנים עברו אלא הגברים הלוחמים; יהושע א' מציין במפורש שהנשים והטף נשארו.">הזקנים וראשי המשפחות בלבד</div>
+          <div class="opt" data-correct="false" data-why="הכוהנים שייכים לשבט לוי ולא לשלושת השבטים; הכתוב מדבר על גברים לוחמים שעברו חלוצים.">הכוהנים ולוחמי הקדמה</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="כיבוש ארץ ישראל על ידי כל שבטי ישראל קודם לחזרת שני וחצי השבטים — זהו עיקרון אחדות העם: אין שבט מתנתק מהמאמץ המשותף (יהושע א' ט״ו).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
+        <p class="quiz__q">מה מלמדת דרישת יהושע מאת שלושת השבטים לעזור לאחיהם לפני שחוזרים לנחלתם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יהושע האמין בשאר השבטים; דרישתו נבעה מעיקרון אחדות העם, לא מחוסר אמון בכוחם הצבאי.">שיהושע לא האמין בכוחם של שאר השבטים</div>
+          <div class="opt" data-correct="false" data-why="נחלת שלושת השבטים הייתה בטוחה; הם כבר קיבלו אותה בימי משה. הדרישה נובעת ממחויבות לעם, לא מסכנה.">שנחלת שלושת השבטים לא הייתה בטוחה</div>
+          <div class="opt" data-correct="true">שאחדות העם חשובה — אין שבט נח כשאחיו עדיין נלחמים</div>
+          <div class="opt" data-correct="false" data-why="יהושע לא ביקש להעניש אותם; הוא הזכיר את ציווי משה ודרש מהם לקיים את התחייבותם לאחיהם.">שיהושע רצה להענישם על שבקשו נחלה לפני שאר השבטים</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="יהושע פנה לשלושת השבטים בתחילת ספר יהושע (פרק א'), עוד לפני שישראל עברו את הירדן. זהו אחד הצעדים הראשונים שנקט יהושע כמנהיג.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
+        <p class="quiz__q">מתי פנה יהושע לשלושת השבטים לגבי חובתם לעזור בכיבוש הארץ?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יריחו נפלה לאחר שישראל עברו את הירדן; יהושע פנה לשלושת השבטים עוד לפני כן.">לאחר נפילת יריחו</div>
+          <div class="opt" data-correct="false" data-why="יהושע פנה לשלושת השבטים לפני חציית הירדן; חצייתה הייתה אחד הצעדים הבאים אחרי פנייה זו.">לאחר שכל ישראל עברו את הירדן</div>
+          <div class="opt" data-correct="true">לפני חציית הירדן, בתחילת הנהגתו</div>
+          <div class="opt" data-correct="false" data-why="יהושע לא פנה אליהם בסוף ימיו; פנייה זו הייתה מהצעדים הראשונים שנקט כמנהיג (יהושע א').">בסוף ימיו, לאחר כיבוש כל הארץ</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+
+      <div class="quiz is-added" data-type="mc" data-explain="משה נתן לראובן, גד וחצי מנשה את נחלתם בעבר הירדן המזרחי, בתנאי שיעברו חלוצים (במדבר ל״ב; יהושע א׳).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
+        <p class="quiz__q">מי היה המנהיג שכבר נתן לשניים וחצי השבטים את נחלתם בעבר הירדן המזרחי, עוד לפני יהושע?</p>
+        <div class="opts">
+          <div class="opt" data-correct="true">משה</div>
+          <div class="opt" data-correct="false" data-why="יהושע רק הזכיר להם את התנאי שקבע משה — נחלתם ניתנה כבר בידי משה.">יהושע</div>
+          <div class="opt" data-correct="false" data-why="אהרן הכוהן לא חילק נחלות לשבטים בעבר הירדן.">אהרן</div>
+          <div class="opt" data-correct="false" data-why="כלב קיבל את חברון, אך לא הוא שנתן את נחלת עבר הירדן.">כלב</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <h2 class="section__title" id="u2" style="margin-top:8px"><span class="section__kicker">יוסף</span> בראשית ל״ז · עיון בתורה</h2>
       <div class="qverse"><span class="ref">בראשית ל״ז, א–י״א (מקוצר)</span>וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ מְגוּרֵי אָבִיו, בְּאֶרֶץ כְּנָעַן. …יוֹסֵף בֶּן שְׁבַע עֶשְׂרֵה שָׁנָה הָיָה רֹעֶה אֶת אֶחָיו בַּצֹּאן… וַיָּבֵא יוֹסֵף אֶת דִּבָּתָם רָעָה אֶל אֲבִיהֶם. וְיִשְׂרָאֵל אָהַב אֶת יוֹסֵף מִכׇּל בָּנָיו כִּי בֶן זְקֻנִים הוּא לוֹ, וְעָשָׂה לוֹ כְּתֹנֶת פַּסִּים. וַיִּרְאוּ אֶחָיו כִּי אֹתוֹ אָהַב אֲבִיהֶם מִכׇּל אֶחָיו, וַיִּשְׂנְאוּ אֹתוֹ… וַיַּחֲלֹם יוֹסֵף חֲלוֹם: וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים בְּתוֹךְ הַשָּׂדֶה, וְהִנֵּה קָמָה אֲלֻמָּתִי וְגַם נִצָּבָה, וְהִנֵּה תְסֻבֶּינָה אֲלֻמֹּתֵיכֶם וַתִּשְׁתַּחֲוֶיןָ לַאֲלֻמָּתִי… וַיַּחֲלֹם עוֹד חֲלוֹם אַחֵר: וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ וְאַחַד עָשָׂר כּוֹכָבִים מִשְׁתַּחֲוִים לִי… וַיְקַנְאוּ בוֹ אֶחָיו, וְאָבִיו שָׁמַר אֶת הַדָּבָר.</div>
 
       <div class="quiz is-official" data-type="fill" data-answer="כנען|ארץ כנען" data-explain="“וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ מְגוּרֵי אָבִיו, בְּאֶרֶץ כְּנָעַן” (פסוק א').">
@@ -1763,304 +2066,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="shneim" style="margin-top:8px"><span class="pill pill--accent">שניים וחצי השבטים</span> יהושע א' · עיון בנביאים</h2>
-      <div class="qverse"><span class="ref">יהושע א', י״ב–ט״ז</span>וְלָראוּבֵנִי וְלַגָּדִי וְלַחֲצִי שֵׁבֶט הַמְנַשֶּׁה אָמַר יְהוֹשֻׁעַ לֵאמֹר: …נְשֵׁיכֶם טַפְּכֶם וּמִקְנֵיכֶם יֵשְׁבוּ בָּאָרֶץ אֲשֶׁר נָתַן לָכֶם מֹשֶׁה בְּעֵבֶר הַיַּרְדֵּן, וְאַתֶּם תַּעַבְרוּ חֲמֻשִׁים לִפְנֵי אֲחֵיכֶם כֹּל גִּבּוֹרֵי הַחַיִל, וַעֲזַרְתֶּם אוֹתָם. עַד אֲשֶׁר יָנִיחַ ה' לַאֲחֵיכֶם כָּכֶם וְיָרְשׁוּ גַם הֵמָּה אֶת הָאָרֶץ… וְשַׁבְתֶּם לְאֶרֶץ יְרֻשַּׁתְכֶם… וַיַּעֲנוּ אֶת יְהוֹשֻׁעַ לֵאמֹר: כֹּל אֲשֶׁר צִוִּיתָנוּ נַעֲשֶׂה, וְאֶל כׇּל אֲשֶׁר תִּשְׁלָחֵנוּ נֵלֵךְ.</div>
-
-      <div class="quiz is-official" data-type="mc" data-explain="התנאי היה לעבור חלוצים לפני אחיהם ולעזור בכיבוש; רק אחרי שכל השבטים ינוחו ויקבלו נחלה — יחזרו (פסוקים י״ד–ט״ו).">
-        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">רב-ברירה</span></div>
-        <p class="quiz__q">מתי יוכלו שניים וחצי השבטים לחזור אל משפחותיהם ואל נחלתם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="חציית הירדן בלבד לא הספיקה — נדרש שכל השבטים יסיימו לכבוש את הארץ ויקבלו נחלה.">אחרי שיחצו את הירדן וייכנסו לארץ</div>
-          <div class="opt" data-correct="true">אחרי שיכבשו את הארץ וכל השבטים יקבלו נחלה</div>
-          <div class="opt" data-correct="false" data-why="זמן קבוע של שנה לא נזכר בתנאי — התנאי היה הישגי: כיבוש הארץ וחלוקת הנחלות.">אחרי שתעבור שנה</div>
-          <div class="opt" data-correct="false" data-why="כניסה ליריחו בלבד לא הייתה התנאי — כיבוש יריחו הוא אחד השלבים, לא סיום הכיבוש כולו.">אחרי שייכנסו אל יריחו</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-official" data-type="open-check"
-        data-points="ראובן::ראובן;;גד::גד;;מנשה::מנשה;;עבר הירדן המזרחי::עבר הירדן|מזרח הירדן|עבר ירדן|מזרחי">
-        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">השלימו על-פי הפסוקים: יהושע פונה אל שבט ___, שבט ___ וחצי שבט ___. שבטים אלו התיישבו ב___.</p>
-        <textarea placeholder="כתבו את שלושת השבטים והמקום..."></textarea>
-        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
-        <div class="feedback"></div>
-        <details class="model"><summary>הצגת התשובות</summary><p>שבט <b>רְאוּבֵן</b>, שבט <b>גָּד</b> וחצי שבט <b>מְנַשֶּׁה</b>. התיישבו ב<b>עֵבֶר הירדן המזרחי</b>.</p></details>
-      </div>
-
-      <div class="quiz is-official" data-type="open-check"
-        data-points="לעבור חלוצים/חמושים לפני אחיהם::חלוצים|חמושים|לפני אחיהם|לפני העם;;לעזור בכיבוש הארץ::לעזור|עזרה|לכבוש|כיבוש|להילחם|נלחם">
-        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">פתוחה</span></div>
-        <p class="quiz__q">לפי פסוקים י״ג–י״ד, איזה תנאי מזכיר להם יהושע — תנאי שהציב משה — כדי שיוכלו להישאר בנחלה שביקשו?</p>
-        <textarea placeholder="כתבו את תשובתכם כאן..."></textarea>
-        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
-        <div class="feedback"></div>
-        <details class="model"><summary>הצגת תשובה</summary><p>שיעברו <b>חֲלוּצִים (חמושים) לפני אחיהם</b> את הירדן, ויעזרו לשאר השבטים לכבוש את הארץ — ורק אז יחזרו לנחלתם.</p></details>
-      </div>
-
-      <div class="quiz is-official" data-type="fill" data-answer="חמושים|חמשים|ועזרתם|עזרתם|חלוצים" data-explain="המילה “חֲמֻשִׁים” (“וְאַתֶּם תַּעַבְרוּ חֲמֻשִׁים לִפְנֵי אֲחֵיכֶם”), או הפועל “וַעֲזַרְתֶּם”, מדגישה את ההתחייבות לעזור לאחיהם.">
-        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">פתוחה · לשון</span></div>
-        <p class="quiz__q">איזו מילה בפסוקים י״ד–ט״ו מדגישה את המחויבות של שניים וחצי השבטים כלפי יתר השבטים? (כתבו מילה אחת)</p>
-        <input type="text" placeholder="מילה אחת...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-official" data-type="open-check"
-        data-points="לעזור לאחרים::לעזור|עזרה|נעזור|עוזרים|לסייע|לחשוב על אחרים|אכפת;;ערבות הדדית / אחדות::ערבות|אחדות|ביחד|הדדית|כולם|חברים|אחד את השני;;גם כשלי כבר טוב / לא רק על עצמי::גם אם|למרות|כבר יש|אצלי טוב|קיבלתי|רק על עצמ|לא רק">
-        <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">ערכים · מסר</span></div>
-        <p class="quiz__q">לפי המסר העולה מהסיפור על שניים וחצי השבטים — כיצד הילדים צריכים לפעול? הסבירו לפי הסיפור המקראי.</p>
-        <textarea placeholder="כתבו את תשובתכם כאן..."></textarea>
-        <button class="btn checkbtn"><i class="fa-solid fa-wand-magic-sparkles"></i> בדיקת תשובה</button>
-        <div class="feedback"></div>
-        <details class="model"><summary>הצגת תשובה לדוגמה</summary><p>גם כשמשהו כבר “מסודר” אצלי, חשוב לעזור לאחרים עד שגם להם יהיה טוב — כמו השבטים שקיבלו נחלה אך התחייבו לעזור לאחיהם לכבוש את הארץ לפני שחזרו הביתה. ערך הערבות ההדדית והאחדות.</p></details>
-      </div>
-
-      <!-- ===== יחידה 3 ===== -->
-
-
-      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים שקיבלו נחלה בעבר הירדן המזרחי הם ראובן, גד וחצי שבט מנשה. הם קיבלו אותה כבר בימי משה, לפני הכניסה לארץ (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
-        <p class="quiz__q">אילו שלושה שבטים קיבלו את נחלתם בעבר הירדן המזרחי, עוד לפני הכניסה לארץ?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="שמעון לא קיבל נחלה בעבר הירדן המזרחי — שמעון קיבל נחלה בדרום ארץ ישראל בתוך נחלת יהודה.">ראובן, שמעון וגד</div>
-          <div class="opt" data-correct="false" data-why="יהודה לא קיבל נחלה בעבר הירדן המזרחי — נחלת יהודה הייתה בדרום ארץ כנען.">יהודה, גד וחצי שבט מנשה</div>
-          <div class="opt" data-correct="true">ראובן, גד וחצי שבט מנשה</div>
-          <div class="opt" data-correct="false" data-why="לוי לא קיבל נחלה כלל, לא בעבר הירדן ולא בארץ כנען — הלוויים קיבלו ערים פזורות.">ראובן, גד ולוי</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="נחלת ראובן, גד וחצי שבט מנשה הייתה בעבר הירדן המזרחי — כלומר מזרחית לנהר הירדן, מחוץ לארץ כנען (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
-        <p class="quiz__q">היכן נמצאת נחלת שלושת השבטים — ראובן, גד וחצי שבט מנשה?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הגליל נמצא בצפון ארץ ישראל המערבית — נחלת שלושת השבטים הייתה מזרחית לירדן.">בצפון ארץ ישראל, ליד הגליל</div>
-          <div class="opt" data-correct="true">בעבר הירדן המזרחי</div>
-          <div class="opt" data-correct="false" data-why="הנגב נמצא בדרום ארץ ישראל המערבית — שלושת השבטים קיבלו נחלה בעבר הירדן המזרחי.">בנגב, דרום ארץ ישראל</div>
-          <div class="opt" data-correct="false" data-why="ים המלח נמצא בגבול ארץ ישראל המערבית — נחלת שלושת השבטים הייתה בעבר הירדן המזרחי.">ליד ים המלח, בדרום מערב</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="יהושע הזכיר לשלושת השבטים את תנאי משה: עליהם לעבור חלוצים לפני אחיהם ולעזור להם לכבוש את הארץ. רק לאחר מכן יוכלו לחזור לנחלתם (יהושע א' י״ב–טו).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
-        <p class="quiz__q">מה ציווה יהושע על שלושת השבטים לפני חציית הירדן?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יהושע לא ציווה עליהם להישאר — להיפך, ציווה שהגברים יעברו חלוצים לפני אחיהם.">להישאר ולשמור על נשיהם וטפם בנחלתם</div>
-          <div class="opt" data-correct="false" data-why="שלושת השבטים לא נשלחו כמרגלים — המרגלים היו שניים שנשלחו ליריחו בנפרד.">לשלוח מרגלים לכנען לפני כולם</div>
-          <div class="opt" data-correct="true">לעבור חלוצים לפני אחיהם ולעזור להם לכבוש את הארץ</div>
-          <div class="opt" data-correct="false" data-why="בניית מזבח לפני היציאה לא מוזכרת בציווי יהושע — יהושע ציווה על מעבר חלוצים.">לבנות מזבח בעבר הירדן לפני היציאה</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים ענו ליהושע: ׳ככל אשר שמענו אל משה כן נשמע אליך׳ — הם הביעו נאמנות מלאה ליהושע כפי שנאמנו למשה (יהושע א' ט״ז–יח).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · פסוק</span></div>
-        <p class="quiz__q">כאשר יהושע פקד על שלושת השבטים לעזור בכיבוש הארץ, מה הייתה תשובתם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="׳נעשה ונשמע׳ הוא ביטוי מקבלת התורה בסיני — שלושת השבטים לא השתמשו בניסוח זה.">׳נעשה ונשמע׳</div>
-          <div class="opt" data-correct="false" data-why="׳כל אשר תדבר אלינו נעשה׳ דומה לניסוח קבלת התורה, אך הציטוט המדויק מיהושע א׳ הוא ׳ככל אשר שמענו אל משה כן נשמע אליך׳.">׳כל אשר תדבר אלינו נעשה׳</div>
-          <div class="opt" data-correct="true">׳ככל אשר שמענו אל משה כן נשמע אליך׳</div>
-          <div class="opt" data-correct="false" data-why="׳ה׳ אלהינו ה׳ אחד׳ הוא פסוק קריאת שמע — הוא לא קשור לתשובת שלושת השבטים ליהושע.">׳ה׳ אלהינו ה׳ אחד׳</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="המילה ׳חלוצים׳ מתארת את שלושת השבטים שנדרשו לעבור חמושים ומוכנים לקרב לפני שאר שבטי ישראל, כהוכחת ערבות הדדית (יהושע א' י״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · פסוק</span></div>
-        <p class="quiz__q">המילה ׳חלוצים׳ בפרשת שלושת השבטים מתארת:</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="שחייה לא קשורה למילה ׳חלוצים׳ — חלוצים הם לוחמים חמושים, לא שוחים.">אנשים שחצו את הירדן בשחייה</div>
-          <div class="opt" data-correct="false" data-why="מרגלים הם בני אדם ששולחים לתור בסתר — חלוצים הם לוחמים שעוברים בראש הצבא.">מרגלים שנשלחו לתור את הארץ</div>
-          <div class="opt" data-correct="true">לוחמים חמושים שעוברים לפני שאר השבטים</div>
-          <div class="opt" data-correct="false" data-why="כוהנים נושאי הארון היו קבוצה אחרת בחציית הירדן — המילה ׳חלוצים׳ מתארת לוחמים חמושים.">כוהנים הנושאים את ארון הברית</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="fill" data-answer="ראובן|שבט ראובן" data-explain="שלושת השבטים שקיבלו נחלה בעבר הירדן הם ראובן, גד וחצי שבט מנשה. שבט ראובן הוא הבכור בין בני יעקב (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">שלושת השבטים שנחלתם בעבר הירדן הם: ______, גד, וחצי שבט מנשה.</p>
-        <input type="text" placeholder="כתבו את התשובה...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="נשי שלושת השבטים, ילדיהם ומקניהם נשארו בעבר הירדן בזמן שהגברים יצאו לכבוש את הארץ עם שאר השבטים (יהושע א' י״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
-        <p class="quiz__q">מה קרה לנשים, לילדים ולמקנה של שלושת השבטים בזמן שהגברים יצאו לכבוש את הארץ?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הנשים, הילדים והמקנה לא עברו את הירדן — רק הגברים הכשירים לצבא עברו חלוצים.">הם עברו יחד עם הגברים את הירדן</div>
-          <div class="opt" data-correct="true">נשארו בעבר הירדן המזרחי בנחלה שקיבלו</div>
-          <div class="opt" data-correct="false" data-why="מדבר סיני לא מוזכר בהקשר זה — המשפחות נשארו בנחלה שקיבלו בעבר הירדן המזרחי.">נסעו לגור בערי מדבר סיני</div>
-          <div class="opt" data-correct="false" data-why="שדות מואב היו מחנה ישראל לפני הכניסה לארץ — אבל נשי שלושת השבטים נשארו בנחלתם בעבר הירדן.">שהו במחנה בשדות מואב</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="ערך הערבות ההדדית בא לידי ביטוי כאשר שלושת השבטים, אף שכבר קיבלו נחלה, אינם מנצלים את זכותם ומחויבים לעזור לאחיהם לכבוש את ארצם לפני שהם חוזרים הביתה.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
-        <p class="quiz__q">איזה ערך מרכזי מלמדת אותנו התנהגותם של שלושת השבטים שהסכימו לעזור לאחיהם לכבוש את הארץ?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="השבטים לא דאגו רק לעצמם — הם דחו את חזרתם הביתה כדי לסייע לאחיהם, וזו הדגמה של ערבות הדדית ולא עצמאות.">עצמאות — כל שבט דואג לעצמו</div>
-          <div class="opt" data-correct="false" data-why="הסיפור עוסק בעזרה לאחים-שבטים שאינם זרים, ולא בהכנסת אורחים לאנשים זרים.">הכנסת אורחים לזרים</div>
-          <div class="opt" data-correct="true">ערבות הדדית — כל ישראל אחראים זה לזה</div>
-          <div class="opt" data-correct="false" data-why="השבטים לא ציתו מחשש לעונש אלא מתוך מחויבות לערבות הדדית — הם קיבלו על עצמם זאת מרצון.">ציות עיוור לשלטון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="לפי יהושע א', שלושת השבטים יוכלו לחזור לנחלתם רק לאחר שכל שבטי ישראל ינוחו וירשו את נחלתם בארץ כנען (יהושע א' ט״ו).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
-        <p class="quiz__q">מה צריך לקרות כדי ששלושת השבטים יוכלו לחזור לנחלתם בעבר הירדן?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הכתוב אינו מציין שהיה צריך אישור של יהושע; התנאי הקבוע הוא שכל ישראל ינוחו בנחלתם.">כאשר יהושע יאשר להם לחזור</div>
-          <div class="opt" data-correct="false" data-why="לא נזכר בתנ״ך כל מגבלה של שלוש שנים; התנאי הוא השגת מנוחה לכל השבטים, ולא לוח-זמנים קבוע.">לאחר שיעברו שלוש שנים בכנען</div>
-          <div class="opt" data-correct="true">לאחר שכל שבטי ישראל ינוחו וירשו את נחלתם</div>
-          <div class="opt" data-correct="false" data-why="כיבוש יריחו בלבד אינו מספיק — יהושע א' קובע שהתנאי הוא שכל שבטי ישראל ינוחו וירשו, לא רק ניצחון אחד.">כאשר הם יכבשו את יריחו</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="חצי שבט מנשה קיבל נחלה בעבר הירדן. החצי השני של שבט מנשה קיבל נחלה בתוך ארץ כנען, מערבית לירדן. כך השבט פוצל לשני צדדים של הנהר.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
-        <p class="quiz__q">מדוע אנו אומרים "חצי שבט מנשה" ולא "שבט מנשה" כשמונים את השבטים בעבר הירדן?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="לא מת חצי שבט מנשה במדבר; השבט פוצל לשני חלקים שקיבלו נחלות בצדדים שונים של הירדן.">כי חצי השבט מת במדבר</div>
-          <div class="opt" data-correct="true">כי החצי השני של שבט מנשה קיבל נחלה בתוך ארץ כנען</div>
-          <div class="opt" data-correct="false" data-why="החצי השני של מנשה לא הצטרף לאפרים; הוא קיבל נחלה עצמאית בתוך ארץ כנען, מערבית לירדן.">כי החצי הנוסף הצטרף לשבט אפרים</div>
-          <div class="opt" data-correct="false" data-why="חלוקת שבט מנשה לא הייתה עונש ממשה אלא תוצאה של בחירת חצי השבט להתנחל בעבר הירדן.">כי משה חילק את השבט כעונש</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="fill" data-answer="מנשה|חצי שבט מנשה|חצי מנשה" data-explain="שלושת השבטים שנחלתם בעבר הירדן הם ראובן, גד וחצי שבט מנשה. חצי שבט מנשה הוא השלישי ברשימה (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">שלושת השבטים שנחלתם בעבר הירדן הם: ראובן, גד, וחצי שבט ______.</p>
-        <input type="text" placeholder="כתבו את התשובה...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="ההתחייבות של שלושת השבטים כוללת שתי נקודות עיקריות: לעבור חלוצים לפני אחיהם, ולא לחזור לבתיהם עד שכל ישראל ינוחו בנחלתם. זוהי דוגמה לנאמנות להתחייבות.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
-        <p class="quiz__q">מה מלמד אותנו הסיפור על כך ששלושת השבטים לא חזרו הביתה מיד לאחר שקיבלו את נחלתם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="אין שום רמז בתנ״ך שהשבטים לא אהבו את נחלתם; הם ביקשו אותה בעצמם ואהבו את אדמת עבר הירדן.">שהם לא אהבו את נחלתם בעבר הירדן</div>
-          <div class="opt" data-correct="false" data-why="התנ״ך לא מזכיר המתנה לגדילת ילדים; הסיבה לאי-החזרה הייתה קיום ההתחייבות לעזור לאחיהם.">שחיכו שיגדלו ילדיהם לפני שחוזרים</div>
-          <div class="opt" data-correct="true">שנאמנות להתחייבות חשובה יותר מנוחיות אישית</div>
-          <div class="opt" data-correct="false" data-why="לא יהושע הוא שמנע את חזרתם — הם עצמם נשארו מתוך נאמנות להתחייבות שנטלו על עצמם.">שיהושע לא נתן להם רשות לחזור</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="כאשר יהושע פנה לשלושת השבטים, הוא הזכיר להם את אשר ציווה משה — כלומר יהושע פעל בהמשך למשה ולא שינה את ההסכם שנקבע (יהושע א' י״ג).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
-        <p class="quiz__q">כשיהושע פנה לשלושת השבטים לגבי חובתם לעזור בכיבוש הארץ, על מי הוא הסתמך?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יהושע לא הסתמך על החלטת הזקנים אלא על ציווי משה שנמסר לשלושת השבטים עוד לפני מותו.">על החלטת הזקנים של ישראל</div>
-          <div class="opt" data-correct="true">על הציווי שנתן משה לשלושת השבטים</div>
-          <div class="opt" data-correct="false" data-why="יהושע לא הסתמך על הבטחה שנתן בעצמו אלא על ציווי משה — הוא הזכיר שמשה הוא שצווה אותם.">על הבטחה שנתן בעצמו לפני עברו</div>
-          <div class="opt" data-correct="false" data-why="לא נפל גורל בנושא זה; ההחלטה נקבעה בציווי מפורש של משה, ולא בהגרלה.">על הגורל שנפל לשלושת השבטים</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים קיבלו את נחלתם כבר בימי משה, עוד לפני מות משה ולפני הכניסה לארץ כנען. יהושע א' מזכיר זאת כרקע לדרישה מהם להמשיך לעזור לאחיהם.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
-        <p class="quiz__q">מתי קיבלו ראובן, גד וחצי שבט מנשה את נחלתם — לפני כניסת ישראל לארץ כנען, או אחריה?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="שלושת השבטים לא קיבלו נחלה לאחר כניסת כל השבטים; הם קיבלו אותה כבר בימי משה, לפני הכניסה.">אחרי שכל השבטים נכנסו לארץ</div>
-          <div class="opt" data-correct="true">לפני הכניסה לארץ, כבר בימי משה</div>
-          <div class="opt" data-correct="false" data-why="כיבוש יריחו היה לאחר הכניסה לארץ; שלושת השבטים כבר קיבלו נחלה עוד בתקופת משה.">בזמן כיבוש יריחו</div>
-          <div class="opt" data-correct="false" data-why="נחלתם ניתנה בימי משה, הרבה לפני מות יהושע; לאחר מות יהושע היה זה שלב מאוחר בהרבה בהיסטוריה.">לאחר מות יהושע</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים הביעו נאמנות מלאה ליהושע ואפילו הוסיפו: כל מי שימרה את פיו — יומת. זה מראה שהם קיבלו את סמכות יהושע במלואה (יהושע א' י״ח).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
-        <p class="quiz__q">בנוסף לציות ליהושע, מה עוד אמרו שלושת השבטים לגבי מי שימרה את פיו?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="עונש של גירוש לעשר שנים אינו מופיע בכתוב; העונש שהזכירו השבטים היה מוות.">שיגורש מהמחנה לעשר שנים</div>
-          <div class="opt" data-correct="false" data-why="אובדן חלק בנחלה אינו העונש שנקבע בכתוב; השבטים אמרו במפורש שהממרה יומת.">שיאבד את חלקו בנחלה</div>
-          <div class="opt" data-correct="true">שיומת — כל מי שימרה את פי יהושע</div>
-          <div class="opt" data-correct="false" data-why="ענישה בשוטים על-ידי הזקנים אינה מוזכרת כאן; הטקסט אומר שמי שימרה יומת.">שייענש בשוטים על-ידי הזקנים</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="fill" data-answer="3|שלושה|שלוש" data-explain="השבטים שנחלתם בעבר הירדן הם ראובן, גד וחצי שבט מנשה — סך הכל שלושה (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">כמה שבטים (כולל חצי שבט) קיבלו נחלה בעבר הירדן המזרחי? ______</p>
-        <input type="text" placeholder="כתבו את התשובה...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="׳כל ישראל ערבים זה לזה׳ — עיקרון זה בא לידי ביטוי בסיפור שני וחצי השבטים: אף שהם כבר קיבלו נחלה, הם אינם מנתקים את עצמם משאר העם אלא עוזרים לאחיהם עד לסיום הכיבוש.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ערכים</span></div>
-        <p class="quiz__q">המשפט "כל ישראל ערבים זה לזה" קשור לסיפור שלושת השבטים כי:</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="שמירה זה על זה בקרב היא דוגמה לאחווה קרבית, אך אינה הסיבה הישירה לקשר עם ״כל ישראל ערבים זה לזה״ בסיפור זה.">הם שמרו זה על זה בקרב</div>
-          <div class="opt" data-correct="false" data-why="תשלום כופר לשבויים אינו מוזכר בסיפור שלושת השבטים; הקשר לערבות הדדית הוא עזרה בכיבוש הארץ.">הם שילמו זה בעד זה כשנפלו בשבי</div>
-          <div class="opt" data-correct="true">הם עזבו את נחלתם ועזרו לאחיהם לכבוש את ארצם, למרות שכבר היה להם מקום</div>
-          <div class="opt" data-correct="false" data-why="השבטים לא שיתפו את נחלתם עם שבטים אחרים; הם עזרו בכיבוש הארץ ולאחר מכן חזרו לנחלתם שלהם.">הם שיתפו את נחלתם עם שבטים אחרים</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="שלושת השבטים שעברו חלוצים יצאו עם שאר ישראל כלוחמים. נשיהם, ילדיהם ובהמותיהם נשארו בעבר הירדן כי לא היה צורך שכולם יעברו (יהושע א' י״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
-        <p class="quiz__q">מי מבין שלושת השבטים עבר את הירדן לסייע בכיבוש הארץ?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="נשיהם, ילדיהם ובהמותיהם נשארו בנחלה; רק הגברים הלוחמים עברו את הירדן חלוצים.">כל בני השבטים — גברים, נשים וילדים</div>
-          <div class="opt" data-correct="true">הגברים הלוחמים בלבד — הנשים והטף נשארו בנחלה</div>
-          <div class="opt" data-correct="false" data-why="לא הזקנים עברו אלא הגברים הלוחמים; יהושע א' מציין במפורש שהנשים והטף נשארו.">הזקנים וראשי המשפחות בלבד</div>
-          <div class="opt" data-correct="false" data-why="הכוהנים שייכים לשבט לוי ולא לשלושת השבטים; הכתוב מדבר על גברים לוחמים שעברו חלוצים.">הכוהנים ולוחמי הקדמה</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="כיבוש ארץ ישראל על ידי כל שבטי ישראל קודם לחזרת שני וחצי השבטים — זהו עיקרון אחדות העם: אין שבט מתנתק מהמאמץ המשותף (יהושע א' ט״ו).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
-        <p class="quiz__q">מה מלמדת דרישת יהושע מאת שלושת השבטים לעזור לאחיהם לפני שחוזרים לנחלתם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יהושע האמין בשאר השבטים; דרישתו נבעה מעיקרון אחדות העם, לא מחוסר אמון בכוחם הצבאי.">שיהושע לא האמין בכוחם של שאר השבטים</div>
-          <div class="opt" data-correct="false" data-why="נחלת שלושת השבטים הייתה בטוחה; הם כבר קיבלו אותה בימי משה. הדרישה נובעת ממחויבות לעם, לא מסכנה.">שנחלת שלושת השבטים לא הייתה בטוחה</div>
-          <div class="opt" data-correct="true">שאחדות העם חשובה — אין שבט נח כשאחיו עדיין נלחמים</div>
-          <div class="opt" data-correct="false" data-why="יהושע לא ביקש להעניש אותם; הוא הזכיר את ציווי משה ודרש מהם לקיים את התחייבותם לאחיהם.">שיהושע רצה להענישם על שבקשו נחלה לפני שאר השבטים</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="יהושע פנה לשלושת השבטים בתחילת ספר יהושע (פרק א'), עוד לפני שישראל עברו את הירדן. זהו אחד הצעדים הראשונים שנקט יהושע כמנהיג.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
-        <p class="quiz__q">מתי פנה יהושע לשלושת השבטים לגבי חובתם לעזור בכיבוש הארץ?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יריחו נפלה לאחר שישראל עברו את הירדן; יהושע פנה לשלושת השבטים עוד לפני כן.">לאחר נפילת יריחו</div>
-          <div class="opt" data-correct="false" data-why="יהושע פנה לשלושת השבטים לפני חציית הירדן; חצייתה הייתה אחד הצעדים הבאים אחרי פנייה זו.">לאחר שכל ישראל עברו את הירדן</div>
-          <div class="opt" data-correct="true">לפני חציית הירדן, בתחילת הנהגתו</div>
-          <div class="opt" data-correct="false" data-why="יהושע לא פנה אליהם בסוף ימיו; פנייה זו הייתה מהצעדים הראשונים שנקט כמנהיג (יהושע א').">בסוף ימיו, לאחר כיבוש כל הארץ</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-
-      <div class="quiz is-added" data-type="mc" data-explain="משה נתן לראובן, גד וחצי מנשה את נחלתם בעבר הירדן המזרחי, בתנאי שיעברו חלוצים (במדבר ל״ב; יהושע א׳).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
-        <p class="quiz__q">מי היה המנהיג שכבר נתן לשניים וחצי השבטים את נחלתם בעבר הירדן המזרחי, עוד לפני יהושע?</p>
-        <div class="opts">
-          <div class="opt" data-correct="true">משה</div>
-          <div class="opt" data-correct="false" data-why="יהושע רק הזכיר להם את התנאי שקבע משה — נחלתם ניתנה כבר בידי משה.">יהושע</div>
-          <div class="opt" data-correct="false" data-why="אהרן הכוהן לא חילק נחלות לשבטים בעבר הירדן.">אהרן</div>
-          <div class="opt" data-correct="false" data-why="כלב קיבל את חברון, אך לא הוא שנתן את נחלת עבר הירדן.">כלב</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <h2 class="section__title" id="u3" style="margin-top:8px"><span class="pill pill--accent">בקיאות</span> פרקי יסוד וידע כללי — דמויות, אירועים ושבטים</h2>
+      <h2 class="section__title" id="u3" style="margin-top:8px"><span class="section__kicker">בקיאות</span> פרקי יסוד וידע כללי — דמויות, אירועים ושבטים</h2>
 
       <div class="quiz is-official" data-type="mc" data-explain="הסדר: המבול ← ירידת יוסף למצרים ← מעמד הר סיני ← חטא המרגלים ← כניסה לארץ כנען.">
         <div class="tags"><span class="quiz__tag quiz__tag--official">★ שאלה רשמית לדוגמה</span><span class="quiz__tag">סדר אירועים</span></div>
@@ -2864,7 +2870,233 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="avot" style="margin-top:8px"><span class="pill pill--accent">האבות</span> סיפורי האבות — אברהם, יצחק ויעקב</h2>
+      <h2 class="section__title" id="mapa-sub" style="margin-top:38px">מפות — מקומות וגיאוגרפיה בתנ"ך</h2>
+      <p class="muted" style="margin:0 0 6px">זיהוי אתרים ומקומות. לתרגול מפה אינטראקטיבי מלא — <a href="https://edu.929.org.il/%d7%97%d7%95%d7%9e%d7%a8%d7%99-%d7%9c%d7%9e%d7%99%d7%93%d7%94-%d7%95%d7%94%d7%a2%d7%a9%d7%a8%d7%94/%d7%9e%d7%a4%d7%94-%d7%9e%d7%9c%d7%90%d7%94/" target="_blank" rel="noopener">מפת המקומות של 929</a>.</p>
+
+      <div class="quiz is-added" data-type="mc" data-explain="בני ישראל חצו את נהר הירדן (שמימיו נעצרו) כדי להיכנס לארץ כנען (יהושע ג').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">את איזה נהר חצו בני ישראל כדי להיכנס לארץ כנען?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="נהר הנילוס הוא הנהר הגדול במצרים — בני ישראל לא חצו אותו בכניסה לכנען אלא חצו את הירדן.">נהר הנילוס</div>
+          <div class="opt" data-correct="true">נהר הירדן</div>
+          <div class="opt" data-correct="false" data-why="נהר פרת הוא נהר גדול במזרח הכנרת (בבל) — הוא נמצא רחוק מאוד ממסלול הכניסה לכנען.">נהר פרת</div>
+          <div class="opt" data-correct="false" data-why="ים סוף נקרע לבני ישראל בצאתם ממצרים — לא בכניסה לכנען, שבה חצו את הירדן.">ים סוף</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="בני ישראל היו עבדים במצרים, ומשם יצאו בהנהגת משה אל ארץ כנען.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">באיזו ארץ היו בני ישראל עבדים לפני הכניסה לארץ כנען?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="בבל היא ארץ אחרת שאליה גלו בני ישראל בשלב מאוחר יותר בהיסטוריה — לא ממנה יצאו.">בבל</div>
+          <div class="opt" data-correct="true">מצרים</div>
+          <div class="opt" data-correct="false" data-why="כנען היא הארץ שאליה נכנסו בני ישראל — לא הארץ שממנה היו עבדים.">כנען</div>
+          <div class="opt" data-correct="false" data-why="מדיין היא הארץ שאליה ברח משה לאחר שהרג את המצרי — לא הארץ שבה היו בני ישראל עבדים.">מדיין</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="יריחו" data-explain="יריחו הייתה העיר הראשונה שכבשו בני ישראל עם כניסתם לארץ (יהושע ו').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה · מפה</span></div>
+        <p class="quiz__q">העיר הראשונה שכבשו בני ישראל בכניסתם לארץ הייתה ______.</p>
+        <input type="text" placeholder="שם העיר...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="נכון. מעמד הר סיני התרחש במדבר, בדרך של בני ישראל ממצרים אל ארץ כנען.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">נכון / לא נכון</span></div>
+        <p class="quiz__q">היגד: "מעמד הר סיני התרחש במדבר, בדרך ממצרים לארץ כנען." נכון או לא נכון?</p>
+        <div class="opts">
+          <div class="opt" data-correct="true">נכון</div>
+          <div class="opt" data-correct="false" data-why="ההיגד נכון: מעמד הר סיני אכן התרחש במדבר, בדרך ממצרים לארץ כנען (שמות י״ט).">לא נכון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="ראובן, גד וחצי שבט מנשה התיישבו בעבר הירדן המזרחי (יהושע א').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">היכן התיישבו שניים וחצי השבטים (ראובן, גד וחצי מנשה)?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="מדבר סיני הוא המקום שבו קיבלו בני ישראל את התורה — לא הנחלה הקבועה של שניים וחצי השבטים.">במדבר סיני</div>
+          <div class="opt" data-correct="true">בעבר הירדן המזרחי</div>
+          <div class="opt" data-correct="false" data-why="במצרים היו בני ישראל עבדים — אחרי הכניסה לארץ לא חזרו לשם להתיישב.">במצרים</div>
+          <div class="opt" data-correct="false" data-why="הגליל הוא אזור בצפון ארץ כנען, ממערב לירדן — שניים וחצי השבטים ביקשו להישאר מזרחית לירדן.">בגליל</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+
+
+      <div class="quiz is-added" data-type="mc" data-explain="ים סוף נקרע לפני בני ישראל כשברחו ממצרים. פרעה ואנשיו טבעו בים, ובני ישראל עברו בחרבה (שמות י״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
+        <p class="quiz__q">באיזה ים נקרעו המים כדי שבני ישראל יברחו ממצרים?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הים התיכון גובל בחוף המערבי של כנען — המקרא לא מתאר קריעת הים התיכון ביציאת מצרים.">הים התיכון</div>
+          <div class="opt" data-correct="false" data-why="ים המלח הוא הים המלוח בדרום כנען — לא הוא נקרע לפני בני ישראל ביציאת מצרים.">ים המלח</div>
+          <div class="opt" data-correct="true">ים סוף</div>
+          <div class="opt" data-correct="false" data-why="הכנרת היא אגם המים המתוקים בצפון ישראל — לא הוא נקרע ביציאת מצרים.">הכנרת</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="הר סיני (הר חורב) נמצא במדבר סיני — חצי האי הדרומי שבין מצרים לכנען. שם קיבלו בני ישראל את התורה (שמות י״ט–כ').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
+        <p class="quiz__q">באיזה מדבר נמצא הר סיני, שבו ניתנה התורה?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="מדבר יהודה הוא מדבר בתוך ארץ ישראל, ממזרח לירושלים — הר סיני לא נמצא בו.">מדבר יהודה</div>
+          <div class="opt" data-correct="true">מדבר סיני</div>
+          <div class="opt" data-correct="false" data-why="מדבר פארן הוא מדבר שבו שהו בני ישראל בחלק מנדודיהם — הוא שונה ממדבר סיני שבו ניתנה התורה.">מדבר פארן</div>
+          <div class="opt" data-correct="false" data-why="מדבר נגב הוא אזור בדרום ישראל — הר סיני לא נמצא בו אלא בחצי האי הדרומי.">מדבר נגב</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="משה ברח ממצרים לאחר שהרג את המצרי, ומצא מקלט בארץ מדיין. שם פגש את יתרו והתחתן עם בתו ציפורה (שמות ב').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
+        <p class="quiz__q">לאיזו ארץ ברח משה לאחר שהרג את המצרי?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="כנען היא ארץ שאליה שלח ה׳ את משה בשליחותו — לא המקום שאליו ברח מפחד פרעה.">כנען</div>
+          <div class="opt" data-correct="false" data-why="מואב היא ארץ שאליה הגיעו בני ישראל בשלהי הנדודים, ושם מת משה — לא שם ברח בתחילה.">מואב</div>
+          <div class="opt" data-correct="true">מדיין</div>
+          <div class="opt" data-correct="false" data-why="אדום היא ממלכה שאיתה נפגשו בני ישראל בדרך לכנען — משה ברח ממצרים למדיין, לא לאדום.">אדום</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="הר נבו הוא ההר שבו עלה משה כדי לראות את ארץ כנען מרחוק, ושם מת. ההר נמצא בעבר הירדן המזרחי, בארץ מואב (דברים ל״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
+        <p class="quiz__q">על איזה הר מת משה לאחר שראה את ארץ כנען מרחוק?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הר סיני הוא ההר שבו ניתנה התורה — משה לא מת שם; הוא מת על הר נבו בארץ מואב.">הר סיני</div>
+          <div class="opt" data-correct="false" data-why="הר הכרמל הוא ההר שבצפון ישראל, הקשור לאליהו הנביא — לא שם מת משה.">הר הכרמל</div>
+          <div class="opt" data-correct="false" data-why="הר גריזים הוא אחד מהרי שכם — משה לא עלה אליו ולא מת עליו.">הר גריזים</div>
+          <div class="opt" data-correct="true">הר נבו</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="יהושע נאם את נאומו הגדול לפני מותו בשכם — בלב הארץ — וכרת שם ברית עם העם. שם נקבר גם יוסף (יהושע כ״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
+        <p class="quiz__q">באיזו עיר נשא יהושע את נאומו הגדול לפני מותו וכרת ברית עם בני ישראל?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יריחו היא העיר הראשונה שנכבשה בכניסה לארץ — לא שם נשא יהושע את נאומו לפני מותו.">יריחו</div>
+          <div class="opt" data-correct="true">שכם</div>
+          <div class="opt" data-correct="false" data-why="חברון היא עיר שנמסרה לכלב בן יפונה — לא שם כרת יהושע ברית לפני מותו.">חברון</div>
+          <div class="opt" data-correct="false" data-why="גבעון היא העיר שתושביה ערמו על יהושע וכרתו עמו ברית בעורמה — לא שם נשא נאומו הגדול.">גבעון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="תושבי גבעון הערימו על יהושע — הגיעו אליו לבושים בבגדים בלים וסיפרו שבאו מארץ רחוקה, ולכן כרת עמם יהושע ברית שלום (יהושע ט').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
+        <p class="quiz__q">תושבי איזו עיר בכנען הערימו על יהושע וכרתו עמו ברית שלום בעורמה?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="יריחו היא העיר שחומותיה נפלו בנס — תושביה לא ניהלו משא ומתן ולא ערמו על יהושע.">יריחו</div>
+          <div class="opt" data-correct="false" data-why="העי היא העיר שנכשל יהושע לכובשה בפעם הראשונה בגלל חטא עכן — לא שם הייתה ערמה.">העי</div>
+          <div class="opt" data-correct="false" data-why="שכם היא העיר שבה כרת יהושע ברית עם העם לפני מותו — לא שם הערימו עליו תושבים.">שכם</div>
+          <div class="opt" data-correct="true">גבעון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="חברון|חֶבְרוֹן" data-explain="חברון היא עיר האבות — שם נקברו אברהם, שרה, יצחק, רבקה, יעקב ולאה במערת המכפלה. לכן היא נחשבת לאחת הערים המקודשות לעם ישראל (בראשית כ״ג).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">במערת המכפלה שבעיר ______ נקברו האבות והאמהות.</p>
+        <input type="text" placeholder="כתבו את התשובה...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="לאחר כיבוש יריחו ניסה יהושע לכבוש את העי, אך נכשל בניסיון הראשון בגלל חטא עכן. לאחר שתוקן החטא, נכבשה העי בפעם השנייה (יהושע ז'–ח').">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
+        <p class="quiz__q">איזו עיר ניסה יהושע לכבוש מיד אחרי יריחו, אך נכשל בניסיון הראשון בגלל חטא עכן?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="שכם היא עיר שבה כרת יהושע ברית עם העם לפני מותו — לא העיר שניסה לכבוש אחרי יריחו.">שכם</div>
+          <div class="opt" data-correct="true">העי</div>
+          <div class="opt" data-correct="false" data-why="גבעון היא העיר שתושביה ערמו על יהושע בברית — לא העיר שנכשל לכובשה בגלל חטא עכן.">גבעון</div>
+          <div class="opt" data-correct="false" data-why="חברון ניתנה לכלב בן יפונה — לא זו העיר שבה נכשל יהושע בגלל חטא עכן.">חברון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="mc" data-explain="הר נבו שבו מת משה נמצא בארץ מואב, בעבר הירדן המזרחי. ממנו ראה משה את כל ארץ כנען לפני מותו (דברים ל״ד).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">נכון / לא נכון</span></div>
+        <p class="quiz__q">היגד: "הר נבו, שבו מת משה, נמצא בתוך ארץ כנען, ממערב לנהר הירדן." נכון או לא נכון?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="ההיגד שגוי: הר נבו לא נמצא בתוך ארץ כנען אלא בעבר הירדן המזרחי (ארץ מואב), ממזרח לירדן.">נכון</div>
+          <div class="opt" data-correct="true">לא נכון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="quiz is-added" data-type="fill" data-answer="באר שבע|באר-שבע" data-explain="באר שבע היא עיר האבות בדרום הארץ — שם חפר אברהם בארות מים וכרת ברית עם אבימלך. השם 'באר שבע' מציין גם שבע בארות וגם שבועה (בראשית כ״א).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
+        <p class="quiz__q">אברהם כרת ברית עם אבימלך וחפר בארות מים בעיר ______, שנמצאת בדרום ארץ כנען.</p>
+        <input type="text" placeholder="כתבו את התשובה...">
+        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
+        <div class="feedback"></div>
+      </div>
+
+
+      <div class="quiz is-added" data-type="mc" data-explain="ים המלח שוכן בדרום-מזרח הארץ, מימיו מלוחים מאוד, והוא הנקודה היבשתית הנמוכה בעולם.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">איזה ים מלוח נמצא בדרום-מזרח הארץ, והוא המקום הנמוך ביותר בעולם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="הכנרת היא אגם מים מתוקים בצפון, לא הים המלוח שבדרום-מזרח.">הכנרת</div>
+          <div class="opt" data-correct="false" data-why="ים סוף נמצא בדרום, בדרך ממצרים, ואינו הים המלוח שבמזרח הארץ.">ים סוף</div>
+          <div class="opt" data-correct="true">ים המלח</div>
+          <div class="opt" data-correct="false" data-why="הים התיכון גובל בחוף המערבי של הארץ, ואינו הנמוך בעולם.">הים התיכון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz is-added" data-type="mc" data-explain="הכנרת היא אגם מים מתוקים בצפון; נהר הירדן יוצא ממנה וזורם דרומה אל ים המלח.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">מהו אגם המים המתוקים בצפון הארץ, שממנו יוצא נהר הירדן ודרומה?</p>
+        <div class="opts">
+          <div class="opt" data-correct="true">הכנרת</div>
+          <div class="opt" data-correct="false" data-why="ים המלח מלוח, ואליו נשפך הירדן — לא ממנו הוא יוצא.">ים המלח</div>
+          <div class="opt" data-correct="false" data-why="ים סוף נמצא בדרום ואינו אגם מים מתוקים בצפון.">ים סוף</div>
+          <div class="opt" data-correct="false" data-why="הים התיכון הוא ים מלוח בחוף המערבי, לא אגם בצפון.">הים התיכון</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz is-added" data-type="mc" data-explain="השם ׳עבר הירדן המזרחי׳ מציין שהוא ממזרח לנהר הירדן — שם התיישבו ראובן, גד וחצי מנשה.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">ארץ כנען נמצאת ממערב לנהר הירדן. באיזה כיוון מהירדן נמצא ׳עבר הירדן המזרחי׳ (נחלת ראובן וגד)?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="עבר הירדן המזרחי נמצא ממזרח לירדן, ולא מדרום.">מדרום</div>
+          <div class="opt" data-correct="true">ממזרח</div>
+          <div class="opt" data-correct="false" data-why="עבר הירדן המזרחי מוגדר לפי כיוון מזרח, לא צפון.">מצפון</div>
+          <div class="opt" data-correct="false" data-why="ממערב לירדן נמצאת ארץ כנען עצמה — עבר הירדן המזרחי הוא ממזרח.">ממערב</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz is-added" data-type="mc" data-explain="הר תבור ועמק יזרעאל שוכנים בצפון הארץ — שם נערך הקרב בין ברק לסיסרא (שופטים ד׳).">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
+        <p class="quiz__q">הר תבור ועמק יזרעאל, זירת הקרב של דבורה וברק נגד סיסרא, נמצאים ב:</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="אזור תבור ויזרעאל הוא בצפון פנים הארץ, לא על חוף הים.">חוף הים התיכון</div>
+          <div class="opt" data-correct="false" data-why="הר תבור ועמק יזרעאל נמצאים בצפון, לא בנגב הדרומי.">דרום הארץ (הנגב)</div>
+          <div class="opt" data-correct="true">צפון הארץ</div>
+          <div class="opt" data-correct="false" data-why="תבור ועמק יזרעאל נמצאים ממערב לירדן, בצפון הארץ.">עבר הירדן המזרחי</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz is-added" data-type="mc" data-explain="מצרים והר סיני בדרום, וארץ כנען בצפון — לכן מסע בני ישראל היה בכיוון כללי צפונה.">
+        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
+        <p class="quiz__q">בני ישראל יצאו ממצרים ומהר סיני (בדרום) אל ארץ כנען. לאיזה כיוון כללי נעו במסעם?</p>
+        <div class="opts">
+          <div class="opt" data-correct="false" data-why="דרומה היה חוזר לכיוון מצרים וסיני — הם נעו צפונה אל כנען.">דרומה</div>
+          <div class="opt" data-correct="false" data-why="מערבה היה מוביל אל הים התיכון, לא אל כנען.">מערבה אל הים</div>
+          <div class="opt" data-correct="true">צפונה</div>
+          <div class="opt" data-correct="false" data-why="בבל נמצאת רחוק במזרח, ולא לשם פנו בכניסה לכנען.">מזרחה אל בבל</div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <h2 class="section__title" id="avot" style="margin-top:8px"><span class="section__kicker">האבות והאמהות</span> סיפורי האבות — אברהם, יצחק ויעקב</h2>
       <p class="muted" style="margin:0 0 6px">בסיס חשוב לבקיאות (פרקי יסוד מבראשית) — השאלות חוברו באותו סגנון ורמה, לפי תכנית הלימודים.</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="אברהם נצטווה בניסיון העֲקֵדה להעלות את בנו יצחק לעולה, ובסוף מלאך עצר אותו (בראשית כ״ב).">
@@ -3267,7 +3499,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="mitzrayim" style="margin-top:8px"><span class="pill pill--accent">יציאת מצרים</span> שעבוד מצרים, משה והיציאה</h2>
+      <h2 class="section__title" id="mitzrayim" style="margin-top:8px"><span class="section__kicker">משה ויציאת מצרים</span> שעבוד מצרים, משה והיציאה</h2>
       <p class="muted" style="margin:0 0 6px">פרקי יסוד מספר שמות — השאלות חוברו באותו סגנון ורמה, לפי תכנית הלימודים.</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="משה, בשליחות ה' ויחד עם אהרן אחיו, הוציא את בני ישראל ממצרים (ספר שמות).">
@@ -3621,7 +3853,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="lang" style="margin-top:8px"><span class="pill pill--accent">לשון</span> לשון התנ״ך</h2>
+      <h2 class="section__title" id="lang" style="margin-top:8px"><span class="section__kicker">לשון ואמצעים ספרותיים</span> לשון התנ״ך</h2>
       <p class="muted" style="margin:0 0 6px">היחידה הזו כולה תוספות שלי — בדוגמה הרשמית לא הופיעו שאלות לשון נפרדות, אך המפרט מפרט אותן במפורש (ו' ההיפוך, ה"א השאלה, ה"א המגמה).</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="“הַשָּׁמַיְמָה” = אל השמים. ה' בסוף המילה מציינת כיוון — זו ה״א המגמה.">
@@ -3847,7 +4079,7 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="sifrut" style="margin-top:8px"><span class="pill pill--accent">אמצעים ספרותיים</span> איך בנוי הסיפור המקראי</h2>
+      <h2 class="section__title" id="sifrut-sub" style="margin-top:34px"><span class="section__kicker">אמצעים ספרותיים</span> איך בנוי הסיפור המקראי</h2>
       <p class="muted" style="margin:0 0 6px">מיומנות עיון מהמפרט — זיהוי אמצעים ומבנה הסיפור. השאלות חוברו באותו סגנון ורמה.</p>
 
       <div class="quiz is-added" data-type="mc" data-explain="מילה החוזרת שוב ושוב בסיפור ומדגישה רעיון מרכזי נקראת מילה מנחה (למשל 'אח/אחים' בסיפור יוסף).">
@@ -4118,235 +4350,24 @@
         <div class="feedback"></div>
       </div>
 
-      <h2 class="section__title" id="mapa" style="margin-top:8px"><span class="pill pill--accent">מפות</span> מקומות וגיאוגרפיה בתנ"ך</h2>
-      <p class="muted" style="margin:0 0 6px">זיהוי אתרים ומקומות. לתרגול מפה אינטראקטיבי מלא — <a href="https://edu.929.org.il/%d7%97%d7%95%d7%9e%d7%a8%d7%99-%d7%9c%d7%9e%d7%99%d7%93%d7%94-%d7%95%d7%94%d7%a2%d7%a9%d7%a8%d7%94/%d7%9e%d7%a4%d7%94-%d7%9e%d7%9c%d7%90%d7%94/" target="_blank" rel="noopener">מפת המקומות של 929</a>.</p>
+      <h2 class="section__title" id="briaa" style="margin-top:8px"><span class="section__kicker">בריאת העולם</span> ספר בראשית א׳–ב׳</h2>
+      <div class="alert alert--info"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body"><span class="alert__title">אין עדיין שאלות בנושא הזה</span>המבנה מוכן — השאלות ייכתבו בשלב הבא.</div></div>
 
-      <div class="quiz is-added" data-type="mc" data-explain="בני ישראל חצו את נהר הירדן (שמימיו נעצרו) כדי להיכנס לארץ כנען (יהושע ג').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">את איזה נהר חצו בני ישראל כדי להיכנס לארץ כנען?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="נהר הנילוס הוא הנהר הגדול במצרים — בני ישראל לא חצו אותו בכניסה לכנען אלא חצו את הירדן.">נהר הנילוס</div>
-          <div class="opt" data-correct="true">נהר הירדן</div>
-          <div class="opt" data-correct="false" data-why="נהר פרת הוא נהר גדול במזרח הכנרת (בבל) — הוא נמצא רחוק מאוד ממסלול הכניסה לכנען.">נהר פרת</div>
-          <div class="opt" data-correct="false" data-why="ים סוף נקרע לבני ישראל בצאתם ממצרים — לא בכניסה לכנען, שבה חצו את הירדן.">ים סוף</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
+      <h2 class="section__title" id="noach" style="margin-top:8px"><span class="section__kicker">נח והמבול</span> ספר בראשית ו׳–ט׳</h2>
+      <div class="alert alert--info"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body"><span class="alert__title">אין עדיין שאלות בנושא הזה</span>המבנה מוכן — השאלות ייכתבו בשלב הבא.</div></div>
 
-      <div class="quiz is-added" data-type="mc" data-explain="בני ישראל היו עבדים במצרים, ומשם יצאו בהנהגת משה אל ארץ כנען.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">באיזו ארץ היו בני ישראל עבדים לפני הכניסה לארץ כנען?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="בבל היא ארץ אחרת שאליה גלו בני ישראל בשלב מאוחר יותר בהיסטוריה — לא ממנה יצאו.">בבל</div>
-          <div class="opt" data-correct="true">מצרים</div>
-          <div class="opt" data-correct="false" data-why="כנען היא הארץ שאליה נכנסו בני ישראל — לא הארץ שממנה היו עבדים.">כנען</div>
-          <div class="opt" data-correct="false" data-why="מדיין היא הארץ שאליה ברח משה לאחר שהרג את המצרי — לא הארץ שבה היו בני ישראל עבדים.">מדיין</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
+      <h2 class="section__title" id="sinai" style="margin-top:8px"><span class="section__kicker">מעמד הר סיני ועשרת הדיברות</span> ספר שמות י״ט–כ׳</h2>
+      <div class="alert alert--info"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body"><span class="alert__title">אין עדיין שאלות בנושא הזה</span>המבנה מוכן — השאלות ייכתבו בשלב הבא.</div></div>
 
-      <div class="quiz is-added" data-type="fill" data-answer="יריחו" data-explain="יריחו הייתה העיר הראשונה שכבשו בני ישראל עם כניסתם לארץ (יהושע ו').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה · מפה</span></div>
-        <p class="quiz__q">העיר הראשונה שכבשו בני ישראל בכניסתם לארץ הייתה ______.</p>
-        <input type="text" placeholder="שם העיר...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
+      <h2 class="section__title" id="midbar" style="margin-top:8px"><span class="section__kicker">הנדודים במדבר</span> ספר במדבר</h2>
+      <div class="alert alert--info"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body"><span class="alert__title">אין עדיין שאלות בנושא הזה</span>המבנה מוכן — השאלות ייכתבו בשלב הבא.</div></div>
 
-      <div class="quiz is-added" data-type="mc" data-explain="נכון. מעמד הר סיני התרחש במדבר, בדרך של בני ישראל ממצרים אל ארץ כנען.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">נכון / לא נכון</span></div>
-        <p class="quiz__q">היגד: "מעמד הר סיני התרחש במדבר, בדרך ממצרים לארץ כנען." נכון או לא נכון?</p>
-        <div class="opts">
-          <div class="opt" data-correct="true">נכון</div>
-          <div class="opt" data-correct="false" data-why="ההיגד נכון: מעמד הר סיני אכן התרחש במדבר, בדרך ממצרים לארץ כנען (שמות י״ט).">לא נכון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="ראובן, גד וחצי שבט מנשה התיישבו בעבר הירדן המזרחי (יהושע א').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">היכן התיישבו שניים וחצי השבטים (ראובן, גד וחצי מנשה)?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="מדבר סיני הוא המקום שבו קיבלו בני ישראל את התורה — לא הנחלה הקבועה של שניים וחצי השבטים.">במדבר סיני</div>
-          <div class="opt" data-correct="true">בעבר הירדן המזרחי</div>
-          <div class="opt" data-correct="false" data-why="במצרים היו בני ישראל עבדים — אחרי הכניסה לארץ לא חזרו לשם להתיישב.">במצרים</div>
-          <div class="opt" data-correct="false" data-why="הגליל הוא אזור בצפון ארץ כנען, ממערב לירדן — שניים וחצי השבטים ביקשו להישאר מזרחית לירדן.">בגליל</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-
-
-      <div class="quiz is-added" data-type="mc" data-explain="ים סוף נקרע לפני בני ישראל כשברחו ממצרים. פרעה ואנשיו טבעו בים, ובני ישראל עברו בחרבה (שמות י״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
-        <p class="quiz__q">באיזה ים נקרעו המים כדי שבני ישראל יברחו ממצרים?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הים התיכון גובל בחוף המערבי של כנען — המקרא לא מתאר קריעת הים התיכון ביציאת מצרים.">הים התיכון</div>
-          <div class="opt" data-correct="false" data-why="ים המלח הוא הים המלוח בדרום כנען — לא הוא נקרע לפני בני ישראל ביציאת מצרים.">ים המלח</div>
-          <div class="opt" data-correct="true">ים סוף</div>
-          <div class="opt" data-correct="false" data-why="הכנרת היא אגם המים המתוקים בצפון ישראל — לא הוא נקרע ביציאת מצרים.">הכנרת</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="הר סיני (הר חורב) נמצא במדבר סיני — חצי האי הדרומי שבין מצרים לכנען. שם קיבלו בני ישראל את התורה (שמות י״ט–כ').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · ידע</span></div>
-        <p class="quiz__q">באיזה מדבר נמצא הר סיני, שבו ניתנה התורה?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="מדבר יהודה הוא מדבר בתוך ארץ ישראל, ממזרח לירושלים — הר סיני לא נמצא בו.">מדבר יהודה</div>
-          <div class="opt" data-correct="true">מדבר סיני</div>
-          <div class="opt" data-correct="false" data-why="מדבר פארן הוא מדבר שבו שהו בני ישראל בחלק מנדודיהם — הוא שונה ממדבר סיני שבו ניתנה התורה.">מדבר פארן</div>
-          <div class="opt" data-correct="false" data-why="מדבר נגב הוא אזור בדרום ישראל — הר סיני לא נמצא בו אלא בחצי האי הדרומי.">מדבר נגב</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="משה ברח ממצרים לאחר שהרג את המצרי, ומצא מקלט בארץ מדיין. שם פגש את יתרו והתחתן עם בתו ציפורה (שמות ב').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
-        <p class="quiz__q">לאיזו ארץ ברח משה לאחר שהרג את המצרי?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="כנען היא ארץ שאליה שלח ה׳ את משה בשליחותו — לא המקום שאליו ברח מפחד פרעה.">כנען</div>
-          <div class="opt" data-correct="false" data-why="מואב היא ארץ שאליה הגיעו בני ישראל בשלהי הנדודים, ושם מת משה — לא שם ברח בתחילה.">מואב</div>
-          <div class="opt" data-correct="true">מדיין</div>
-          <div class="opt" data-correct="false" data-why="אדום היא ממלכה שאיתה נפגשו בני ישראל בדרך לכנען — משה ברח ממצרים למדיין, לא לאדום.">אדום</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="הר נבו הוא ההר שבו עלה משה כדי לראות את ארץ כנען מרחוק, ושם מת. ההר נמצא בעבר הירדן המזרחי, בארץ מואב (דברים ל״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · דמויות</span></div>
-        <p class="quiz__q">על איזה הר מת משה לאחר שראה את ארץ כנען מרחוק?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הר סיני הוא ההר שבו ניתנה התורה — משה לא מת שם; הוא מת על הר נבו בארץ מואב.">הר סיני</div>
-          <div class="opt" data-correct="false" data-why="הר הכרמל הוא ההר שבצפון ישראל, הקשור לאליהו הנביא — לא שם מת משה.">הר הכרמל</div>
-          <div class="opt" data-correct="false" data-why="הר גריזים הוא אחד מהרי שכם — משה לא עלה אליו ולא מת עליו.">הר גריזים</div>
-          <div class="opt" data-correct="true">הר נבו</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="יהושע נאם את נאומו הגדול לפני מותו בשכם — בלב הארץ — וכרת שם ברית עם העם. שם נקבר גם יוסף (יהושע כ״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
-        <p class="quiz__q">באיזו עיר נשא יהושע את נאומו הגדול לפני מותו וכרת ברית עם בני ישראל?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יריחו היא העיר הראשונה שנכבשה בכניסה לארץ — לא שם נשא יהושע את נאומו לפני מותו.">יריחו</div>
-          <div class="opt" data-correct="true">שכם</div>
-          <div class="opt" data-correct="false" data-why="חברון היא עיר שנמסרה לכלב בן יפונה — לא שם כרת יהושע ברית לפני מותו.">חברון</div>
-          <div class="opt" data-correct="false" data-why="גבעון היא העיר שתושביה ערמו על יהושע וכרתו עמו ברית בעורמה — לא שם נשא נאומו הגדול.">גבעון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="תושבי גבעון הערימו על יהושע — הגיעו אליו לבושים בבגדים בלים וסיפרו שבאו מארץ רחוקה, ולכן כרת עמם יהושע ברית שלום (יהושע ט').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · אירועים</span></div>
-        <p class="quiz__q">תושבי איזו עיר בכנען הערימו על יהושע וכרתו עמו ברית שלום בעורמה?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="יריחו היא העיר שחומותיה נפלו בנס — תושביה לא ניהלו משא ומתן ולא ערמו על יהושע.">יריחו</div>
-          <div class="opt" data-correct="false" data-why="העי היא העיר שנכשל יהושע לכובשה בפעם הראשונה בגלל חטא עכן — לא שם הייתה ערמה.">העי</div>
-          <div class="opt" data-correct="false" data-why="שכם היא העיר שבה כרת יהושע ברית עם העם לפני מותו — לא שם הערימו עליו תושבים.">שכם</div>
-          <div class="opt" data-correct="true">גבעון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="fill" data-answer="חברון|חֶבְרוֹן" data-explain="חברון היא עיר האבות — שם נקברו אברהם, שרה, יצחק, רבקה, יעקב ולאה במערת המכפלה. לכן היא נחשבת לאחת הערים המקודשות לעם ישראל (בראשית כ״ג).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">במערת המכפלה שבעיר ______ נקברו האבות והאמהות.</p>
-        <input type="text" placeholder="כתבו את התשובה...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="לאחר כיבוש יריחו ניסה יהושע לכבוש את העי, אך נכשל בניסיון הראשון בגלל חטא עכן. לאחר שתוקן החטא, נכבשה העי בפעם השנייה (יהושע ז'–ח').">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · סדר</span></div>
-        <p class="quiz__q">איזו עיר ניסה יהושע לכבוש מיד אחרי יריחו, אך נכשל בניסיון הראשון בגלל חטא עכן?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="שכם היא עיר שבה כרת יהושע ברית עם העם לפני מותו — לא העיר שניסה לכבוש אחרי יריחו.">שכם</div>
-          <div class="opt" data-correct="true">העי</div>
-          <div class="opt" data-correct="false" data-why="גבעון היא העיר שתושביה ערמו על יהושע בברית — לא העיר שנכשל לכובשה בגלל חטא עכן.">גבעון</div>
-          <div class="opt" data-correct="false" data-why="חברון ניתנה לכלב בן יפונה — לא זו העיר שבה נכשל יהושע בגלל חטא עכן.">חברון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="mc" data-explain="הר נבו שבו מת משה נמצא בארץ מואב, בעבר הירדן המזרחי. ממנו ראה משה את כל ארץ כנען לפני מותו (דברים ל״ד).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">נכון / לא נכון</span></div>
-        <p class="quiz__q">היגד: "הר נבו, שבו מת משה, נמצא בתוך ארץ כנען, ממערב לנהר הירדן." נכון או לא נכון?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="ההיגד שגוי: הר נבו לא נמצא בתוך ארץ כנען אלא בעבר הירדן המזרחי (ארץ מואב), ממזרח לירדן.">נכון</div>
-          <div class="opt" data-correct="true">לא נכון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="quiz is-added" data-type="fill" data-answer="באר שבע|באר-שבע" data-explain="באר שבע היא עיר האבות בדרום הארץ — שם חפר אברהם בארות מים וכרת ברית עם אבימלך. השם 'באר שבע' מציין גם שבע בארות וגם שבועה (בראשית כ״א).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">השלמה</span></div>
-        <p class="quiz__q">אברהם כרת ברית עם אבימלך וחפר בארות מים בעיר ______, שנמצאת בדרום ארץ כנען.</p>
-        <input type="text" placeholder="כתבו את התשובה...">
-        <button class="btn checkbtn"><i class="fa-solid fa-check"></i> בדיקה</button>
-        <div class="feedback"></div>
-      </div>
-
-
-      <div class="quiz is-added" data-type="mc" data-explain="ים המלח שוכן בדרום-מזרח הארץ, מימיו מלוחים מאוד, והוא הנקודה היבשתית הנמוכה בעולם.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">איזה ים מלוח נמצא בדרום-מזרח הארץ, והוא המקום הנמוך ביותר בעולם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="הכנרת היא אגם מים מתוקים בצפון, לא הים המלוח שבדרום-מזרח.">הכנרת</div>
-          <div class="opt" data-correct="false" data-why="ים סוף נמצא בדרום, בדרך ממצרים, ואינו הים המלוח שבמזרח הארץ.">ים סוף</div>
-          <div class="opt" data-correct="true">ים המלח</div>
-          <div class="opt" data-correct="false" data-why="הים התיכון גובל בחוף המערבי של הארץ, ואינו הנמוך בעולם.">הים התיכון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-      <div class="quiz is-added" data-type="mc" data-explain="הכנרת היא אגם מים מתוקים בצפון; נהר הירדן יוצא ממנה וזורם דרומה אל ים המלח.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">מהו אגם המים המתוקים בצפון הארץ, שממנו יוצא נהר הירדן ודרומה?</p>
-        <div class="opts">
-          <div class="opt" data-correct="true">הכנרת</div>
-          <div class="opt" data-correct="false" data-why="ים המלח מלוח, ואליו נשפך הירדן — לא ממנו הוא יוצא.">ים המלח</div>
-          <div class="opt" data-correct="false" data-why="ים סוף נמצא בדרום ואינו אגם מים מתוקים בצפון.">ים סוף</div>
-          <div class="opt" data-correct="false" data-why="הים התיכון הוא ים מלוח בחוף המערבי, לא אגם בצפון.">הים התיכון</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-      <div class="quiz is-added" data-type="mc" data-explain="השם ׳עבר הירדן המזרחי׳ מציין שהוא ממזרח לנהר הירדן — שם התיישבו ראובן, גד וחצי מנשה.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">ארץ כנען נמצאת ממערב לנהר הירדן. באיזה כיוון מהירדן נמצא ׳עבר הירדן המזרחי׳ (נחלת ראובן וגד)?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="עבר הירדן המזרחי נמצא ממזרח לירדן, ולא מדרום.">מדרום</div>
-          <div class="opt" data-correct="true">ממזרח</div>
-          <div class="opt" data-correct="false" data-why="עבר הירדן המזרחי מוגדר לפי כיוון מזרח, לא צפון.">מצפון</div>
-          <div class="opt" data-correct="false" data-why="ממערב לירדן נמצאת ארץ כנען עצמה — עבר הירדן המזרחי הוא ממזרח.">ממערב</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-      <div class="quiz is-added" data-type="mc" data-explain="הר תבור ועמק יזרעאל שוכנים בצפון הארץ — שם נערך הקרב בין ברק לסיסרא (שופטים ד׳).">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · מפה</span></div>
-        <p class="quiz__q">הר תבור ועמק יזרעאל, זירת הקרב של דבורה וברק נגד סיסרא, נמצאים ב:</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="אזור תבור ויזרעאל הוא בצפון פנים הארץ, לא על חוף הים.">חוף הים התיכון</div>
-          <div class="opt" data-correct="false" data-why="הר תבור ועמק יזרעאל נמצאים בצפון, לא בנגב הדרומי.">דרום הארץ (הנגב)</div>
-          <div class="opt" data-correct="true">צפון הארץ</div>
-          <div class="opt" data-correct="false" data-why="תבור ועמק יזרעאל נמצאים ממערב לירדן, בצפון הארץ.">עבר הירדן המזרחי</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
-      <div class="quiz is-added" data-type="mc" data-explain="מצרים והר סיני בדרום, וארץ כנען בצפון — לכן מסע בני ישראל היה בכיוון כללי צפונה.">
-        <div class="tags"><span class="quiz__tag quiz__tag--added">✎ שאלה לתרגול</span><span class="quiz__tag">רב-ברירה · הסקה</span></div>
-        <p class="quiz__q">בני ישראל יצאו ממצרים ומהר סיני (בדרום) אל ארץ כנען. לאיזה כיוון כללי נעו במסעם?</p>
-        <div class="opts">
-          <div class="opt" data-correct="false" data-why="דרומה היה חוזר לכיוון מצרים וסיני — הם נעו צפונה אל כנען.">דרומה</div>
-          <div class="opt" data-correct="false" data-why="מערבה היה מוביל אל הים התיכון, לא אל כנען.">מערבה אל הים</div>
-          <div class="opt" data-correct="true">צפונה</div>
-          <div class="opt" data-correct="false" data-why="בבל נמצאת רחוק במזרח, ולא לשם פנו בכניסה לכנען.">מזרחה אל בבל</div>
-        </div>
-        <div class="feedback"></div>
-      </div>
+      <h2 class="section__title" id="neumim" style="margin-top:8px"><span class="section__kicker">נאומים היסטוריים</span> ספר דברים</h2>
+      <div class="alert alert--info"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body"><span class="alert__title">אין עדיין שאלות בנושא הזה</span>המבנה מוכן — השאלות ייכתבו בשלב הבא.</div></div>
 
       <div class="center mt-m">
-        <a class="btn btn--ghost" href="nosim.html">לחזרה על הסיכומים</a>
-        <a class="btn btn--lg btn--mint" href="matzeget.html"><i class="fa-solid fa-display"></i> למצגת על המבחן</a>
+        <a class="btn" href="nosim.html">לחזרה על הסיכומים</a>
+        <a class="btn btn--lg" href="matzeget.html"><i class="fa-solid fa-display"></i> למצגת על המבחן</a>
       </div>
     </div>
   </section>
@@ -4509,7 +4530,8 @@ document.querySelectorAll('.quiz[data-type="match"]').forEach(function(q){
     else if(cur){ panels[cur].push(node); }
   });
   // מונה שאלות לכל נושא — באנר מתחת לכותרת הנושא (רשמיות + לתרגול)
-  ids.forEach(function(id){
+  var qaOn=(getComputedStyle(document.documentElement).getPropertyValue("--qa-counts")||"").trim()!=="none";
+  if(qaOn) ids.forEach(function(id){
     var quizzes=panels[id].filter(function(x){return x.classList&&x.classList.contains('quiz');});
     if(!quizzes.length) return;
     var off=quizzes.filter(function(x){return x.classList.contains('is-official');}).length;
@@ -4538,7 +4560,7 @@ document.querySelectorAll('.quiz[data-type="match"]').forEach(function(q){
   var hdr=document.querySelector('.site-header');
   function setTop(){ bar.style.top=((hdr?hdr.offsetHeight:0))+'px'; }
   setTop(); window.addEventListener('resize',setTop);
-  show(ids[0]);
+  show(ids.indexOf("avot")>-1?"avot":ids[0]);
 })();
 </script>
 </body>

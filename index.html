@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>מאגר מבדק תנ"ך כיתה ו' – תנופה תשפ"ו</title>
+<title>מבדק תנ"ך כיתה ו' – תנופה תשפ"ז</title>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="psycho-components.css">
@@ -12,103 +12,172 @@
 <body>
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand__logo">ת</span>
-      <span class="brand__name">מאגר מבדק תנ"ך<small>כיתה ו' · תנופה תשפ"ו</small></span>
+      <span class="brand__name">מבדק תנ"ך<small>כיתה ו' · תנופה תשפ"ז</small></span>
     </a>
     <nav class="nav">
-      <a href="index.html" class="active">בית</a>
-      <a href="matzeget.html">על המבדק</a>
-      <a href="nosim.html">נושאים וסיכומים</a>
+      <a href="./" class="active">בית</a>
+      <a href="tochniot.html">תכניות לימודים</a>
+      <a href="morim.html">מערכי שיעור</a>
+      <a href="nosim.html">נושאים</a>
+      <a href="ezrim.html">עזרי הוראה</a>
       <a href="tirgul.html">תרגול</a>
-      <a href="zman.html">ציר זמן</a>
-      <a href="morim.html">אזור מורה</a>
       <a href="mekorot.html">מקורות</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <span class="hero__blob hero__blob--1"></span>
-  <span class="hero__blob hero__blob--2"></span>
-  <span class="hero__blob hero__blob--3"></span>
-  <div class="hero__inner">
-    <span class="hero__kicker">מבדק תנופה בתנ"ך · פיקוח ממלכתי · תשפ"ו</span>
-    <h1 class="hero__title">כל מה שצריך למבדק התנ"ך של כיתה ו'</h1>
-    <p class="hero__sub">מאגר אחד לתלמידים ולמורים: מבנה המבדק, סיכומי הנושאים לפי המפרט, תרגול אינטראקטיבי בסגנון הבחינה, מערכי שיעור, מפות וציר זמן — הכול במקום אחד.</p>
-    <div class="hero__cta">
-      <a class="btn btn--lg" href="tirgul.html"><i class="fa-solid fa-circle-check"></i> מתחילים לתרגל</a>
-      <a class="btn btn--lg btn--ghost" href="matzeget.html"><i class="fa-solid fa-compass"></i> איך בנוי המבדק?</a>
-    </div>
-  </div>
-</section>
-
 <main>
-  <!-- שני אזורים -->
+
+  <!-- ===== מה זה המבדק ===== -->
   <section class="section">
     <div class="section__inner">
-      <div class="grid grid--2">
-        <a class="feature-card feature-card--mint" href="nosim.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-book-open"></i></div>
-          <h3 class="feature-card__title">אזור התלמיד</h3>
-          <p class="feature-card__desc">סיכומי כל הנושאים שבמפרט — סיפורי היסוד, הדמויות, הלשון והערכים — בשפה ברורה לכיתה ו'.</p>
-          <span class="feature-card__go">לנושאים והסיכומים <i class="fa-solid fa-arrow-left"></i></span>
-        </a>
-        <a class="feature-card feature-card--yellow" href="morim.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <h3 class="feature-card__title">אזור המורה</h3>
-          <p class="feature-card__desc">מערכי שיעור מוכנים לפי הרצף, דפי עבודה, מצגות ומפות — קישורים ישירים לחומרי ההוראה.</p>
-          <span class="feature-card__go">לאזור המורה <i class="fa-solid fa-arrow-left"></i></span>
-        </a>
+      <h1 class="section__title center">מה זה המבדק?</h1>
+      <p class="section__lead center" style="margin-inline:auto;max-width:74ch">
+        מבדק תנופה בתנ"ך הוא כלי ל<b>הערכה מסכמת</b> של הידע, המיומנויות והערכים שנרכשו לאורך לימודי התנ"ך ביסודי.
+        הוא מצטרף למערך המבחנים הארצי — לצד שפת אם, אנגלית, מתמטיקה ומדעים — ובוחן את רמת השליטה בהתאם לתכנית הלימודים.
+      </p>
+
+      <div class="grid grid--3 mt-m">
+        <div class="feature-card feature-card--blue">
+          <div class="feature-card__icon"><i class="fa-solid fa-book"></i></div>
+          <h3 class="feature-card__title">ציר הידע</h3>
+          <p class="feature-card__desc">שליטה בתכנים השוטפים של ה'–ו' (הידע הקרוב) לצד פרקי יסוד מכל היסודי (הידע הרחוק).</p>
+        </div>
+        <div class="feature-card feature-card--mint">
+          <div class="feature-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 class="feature-card__title">ציר המיומנות</h3>
+          <p class="feature-card__desc">התמצאות עצמאית בפרקי התנ"ך ומיומנויות עיון: ידע, הבנה והסקה עד גיבוש תובנות.</p>
+        </div>
+        <div class="feature-card feature-card--purple">
+          <div class="feature-card__icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3 class="feature-card__title">ציר הערכים</h3>
+          <p class="feature-card__desc">בירור ערכי, מוסרי וחברתי — קישור בין המקורות למציאות וגיבוש עמדה אישית.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- מה יש במאגר -->
+  <!-- ===== שלוש היחידות ===== -->
   <section class="section section--soft">
     <div class="section__inner">
-      <h2 class="section__title center">מה יש במאגר?</h2>
-      <p class="section__lead center" style="margin-inline:auto">ששה שערים, כל אחד בצבע משלו</p>
-      <div class="grid grid--3 mt-s">
-        <a class="feature-card feature-card--blue" href="matzeget.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-compass"></i></div>
-          <h3 class="feature-card__title">על המבדק</h3>
-          <p class="feature-card__desc">מבנה שלוש היחידות, חלוקת המשקלים, סוגי השאלות ופרטי יום הבחינה.</p>
-        </a>
-        <a class="feature-card feature-card--mint" href="nosim.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-list-check"></i></div>
-          <h3 class="feature-card__title">סיכומים לפי נושא</h3>
-          <p class="feature-card__desc">סיפורי היסוד, דמויות מפתח, מיומנויות לשון וערכים — לפי המפרט.</p>
-        </a>
-        <a class="feature-card feature-card--yellow" href="tirgul.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-pen-to-square"></i></div>
-          <h3 class="feature-card__title">תרגול אינטראקטיבי</h3>
-          <p class="feature-card__desc">שאלות בסגנון המבדק עם בדיקה עצמית מיידית ותשובות לדוגמה.</p>
-        </a>
-        <a class="feature-card feature-card--purple" href="zman.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-          <h3 class="feature-card__title">ציר זמן תנ"כי</h3>
-          <p class="feature-card__desc">מהבריאה ועד תקופת השופטים — סדר האירועים בקו אחד ברור.</p>
-        </a>
-        <a class="feature-card feature-card--blue" href="morim.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-folder-open"></i></div>
-          <h3 class="feature-card__title">מערכי שיעור</h3>
-          <p class="feature-card__desc">יחידות הוראה לכיתה ו' (יהושע ושופטים) וקישור לכל השכבות.</p>
-        </a>
-        <a class="feature-card feature-card--mint" href="mekorot.html">
-          <div class="feature-card__icon"><i class="fa-solid fa-scroll"></i></div>
-          <h3 class="feature-card__title">מקורות</h3>
-          <p class="feature-card__desc">מפרט המבדק, דוגמת הבחינה, תכנית הלימודים והמיקוד — המסמכים הרשמיים.</p>
-        </a>
+      <h2 class="section__title center">שלוש יחידות המבדק</h2>
+      <p class="section__lead center" style="margin-inline:auto">כ-23 שאלות · כ-90 דקות</p>
+      <table class="t">
+        <tr><th style="width:34px">#</th><th>היחידה</th><th>על מה היא בוחנת</th><th>משותף / מותאם</th></tr>
+        <tr><td>1</td><td><b>נושאי הלימוד</b> (ה'–ו')</td><td>ידע ובקיאות בתכני תכנית הלימודים והיכולת לעבד אותם.</td><td>יחידה נפרדת, מותאמת לכל מגזר</td></tr>
+        <tr><td>2</td><td><b>עיון</b></td><td>התמודדות עצמאית עם טקסט תנ"כי — ידע, הבנה והסקה.</td><td>משותפת ברובה: קטע ושאלות משותפים לצד שאלות ייחודיות</td></tr>
+        <tr><td>3</td><td><b>פרקי יסוד</b> וידע כללי</td><td>ידע רחב המצופה מכל תלמיד — דמויות מפתח ואירועים מכוננים.</td><td>משותפת בעיקרה: בסיס אחיד לצד התאמות</td></tr>
+      </table>
+
+      <div class="grid grid--3 mt-m">
+        <div class="kpi kpi--accent-yellow"><div class="kpi__label">נושאי לימוד ה'–ו'</div><div class="kpi__value">40%</div></div>
+        <div class="kpi kpi--accent-teal"><div class="kpi__label">עיון ומיומנויות</div><div class="kpi__value">40%</div></div>
+        <div class="kpi kpi--accent-mint"><div class="kpi__label">פרקי יסוד וידע כללי</div><div class="kpi__value">20%</div></div>
       </div>
     </div>
   </section>
+
+  <!-- ===== סוגי השאלות ===== -->
+  <section class="section">
+    <div class="section__inner">
+      <h2 class="section__title center">סוגי השאלות</h2>
+      <p class="section__lead center" style="margin-inline:auto">כדאי להכיר את כולם מראש — כך אף פורמט לא מפתיע ביום המבדק</p>
+      <div class="chips chips--static">
+        <span class="pill pill--md">שאלות פתוחות</span>
+        <span class="pill pill--md">רב-ברירה (אמריקאיות)</span>
+        <span class="pill pill--md">קלוז</span>
+        <span class="pill pill--md">השלמת משפטים</span>
+        <span class="pill pill--md">היגדים (נכון/לא נכון)</span>
+        <span class="pill pill--md">השוואה</span>
+        <span class="pill pill--md">התאמה</span>
+        <span class="pill pill--md">שילוב מקורות</span>
+        <span class="pill pill--md">איורים, קומיקס ומפות</span>
+      </div>
+      <p class="center mt-m" style="max-width:74ch;margin-inline:auto">
+        הדגש: היכולת <b>לקרוא, להבין ולפרש את הכתוב באופן עצמאי</b> — התמצאות במבנה הספר,
+        הבנת הלשון התנ"כית והאמצעים הספרותיים, ניתוח טקסטואלי ועיסוק בערכים.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== יום המבדק ===== -->
+  <section class="section section--soft">
+    <div class="section__inner">
+      <h2 class="section__title center">איך זה עובד בפועל?</h2>
+      <ul class="links" style="max-width:820px;margin-inline:auto">
+        <li><div class="meta"><b>מתכונת</b><span>החל מתשפ"ז — מבחן חיצוני של ראמ"ה, במתכונת מבחני תנופה. (בתשפ"ו התקיים כמשימה פנימית בבית הספר.)</span></div></li>
+        <li><div class="meta"><b>משך</b><span>כ-90 דקות. תלמידים הזכאים להתאמות יכולים לקבל תוספת זמן.</span></div></li>
+        <li><div class="meta"><b>עזרים מותרים</b><span>תנ"ך שלם ללא פירושים — לכן חשוב להתאמן בניווט מהיר בין הפרקים.</span></div></li>
+        <li><div class="meta"><b>מטרת המבדק</b><span>מיפוי רמת השליטה לשם קידום ההוראה — ולא "ציון בתעודה".</span></div></li>
+        <li><div class="meta"><b>מועד</b><span>מועד המבדק לתשפ"ז מתפרסם על ידי ראמ"ה בלוח המבחנים השנתי.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== שאלות לדוגמה ===== -->
+  <section class="section">
+    <div class="section__inner">
+      <h2 class="section__title center">שלוש שאלות אמיתיות — אחת מכל חלק</h2>
+      <p class="section__lead center" style="margin-inline:auto">מתוך המבדק לדוגמה של ראמ"ה</p>
+
+      <div class="grid grid--3 mt-s">
+        <div class="panel">
+          <span class="section__kicker">חלק 1 · 40%</span>
+          <h3>נושאי הלימוד (ה'–ו')</h3>
+          <p class="muted">בעיקר <b>יהושע ושופטים</b>, וגם נושאים כמו חוקים חברתיים בויקרא י"ט.</p>
+          <div class="verse">"וְלֹא תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ" · "לֹא תִגְנֹבוּ וְלֹא תְכַחֲשׁוּ"</div>
+          <p>מהו הערך המשותף? <span class="muted">(עזרה לזולת / סבלנות / יושר / אחריות)</span></p>
+          <p>תשובה: <b style="color:var(--color-success)">יושר</b></p>
+        </div>
+
+        <div class="panel">
+          <span class="section__kicker">חלק 2 · 40%</span>
+          <h3>עיון בטקסט</h3>
+          <p class="muted">קוראים פרק מהתורה ופרק מהנביאים ועונים על שאלות הבנה, השוואה והסקה.</p>
+          <div class="verse">יהושע א'</div>
+          <p>מתי יוכלו שניים וחצי השבטים לחזור אל נחלתם?</p>
+          <p>תשובה: <b style="color:var(--color-success)">אחרי שיכבשו את הארץ וכל השבטים יקבלו נחלה</b></p>
+        </div>
+
+        <div class="panel">
+          <span class="section__kicker">חלק 3 · 20%</span>
+          <h3>פרקי יסוד וידע כללי</h3>
+          <p class="muted">"למי נאמר?", סדר אירועים, שבטי ישראל, עצי משפחה, דמויות וערכים.</p>
+          <div class="verse">סדר אירועים</div>
+          <p>איזה אירוע קרה ראשון? <span class="muted">(מעמד הר סיני / המבול / כניסה לארץ כנען / חטא המרגלים)</span></p>
+          <p>תשובה: <b style="color:var(--color-success)">המבול</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== המסמכים הרשמיים ===== -->
+  <section class="section section--soft">
+    <div class="section__inner">
+      <h2 class="section__title center">המסמכים הרשמיים</h2>
+      <ul class="links" style="max-width:820px;margin-inline:auto">
+        <li>
+          <div class="meta"><b>מפרט המבדק</b><span>המסמך הרשמי של ראמ"ה — מבנה, יחידות, משקלים וסוגי שאלות.</span></div>
+          <a class="btn btn--sm" href="https://meyda.education.gov.il/files/Rama/Tnufa_tanach_6_mifrat_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> למפרט</a>
+        </li>
+        <li>
+          <div class="meta"><b>מבדק לדוגמה</b><span>שאלון מלא לדוגמה — כדאי לפתור אותו לקראת המבדק.</span></div>
+          <a class="btn btn--sm" href="https://meyda.education.gov.il/files/Rama/tanach_mivchan_mamlachti_g.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> למבדק לדוגמה</a>
+        </li>
+      </ul>
+      <p class="center mt-s"><a href="matzeget.html" style="color:var(--color-teal-dark);font-weight:800"><i class="fa-solid fa-display"></i> מצגת היכרות עם המבדק — שקופית אחר שקופית</a></p>
+      <p class="center mt-s"><a href="mekorot.html" style="color:var(--color-teal-dark);font-weight:800">לכל המקורות והמסמכים <i class="fa-solid fa-arrow-left"></i></a></p>
+    </div>
+  </section>
+
 </main>
 
 <footer class="foot">
   <div class="foot__inner">
-    <div>מאגר לימודי למבדק תנ״ך כיתה ו'</div>
-    <div>הסיכומים מבוססים על מפרט המבדק ותכנית הלימודים הרשמית</div>
+    <div>מאגר לימודי למבדק תנ"ך כיתה ו' · תשפ"ז</div>
+    <div>מבוסס על מפרט המבדק של ראמ"ה ותכנית הלימודים הרשמית</div>
   </div>
 </footer>
 </body>

@@ -121,11 +121,29 @@ ul.links li .meta{flex:1;min-width:220px;}
 ul.links li .meta b{display:block;color:var(--color-ink);font-size:1.05rem;font-weight:800;}
 ul.links li .meta span{display:block;color:var(--color-muted);font-size:.92rem;}
 
+/* כרטיס-קישור: כל הכרטיסייה לחיצה, לא רק הכפתור.
+   הכפתור פורש שכבה שקופה על כל שטח הכרטיס, ולכן לחיצה בכל מקום מפעילה אותו. */
+ul.links li{position:relative;}
+ul.links li > a.btn{position:relative;z-index:2;}
+ul.links li > a.btn::after{content:"";position:absolute;inset:0;z-index:1;border-radius:var(--radius-md);}
+ul.links li .meta a{position:relative;z-index:3;}
+ul.links li:has(> a.btn){
+  cursor:pointer;
+  transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
+}
+ul.links li:has(> a.btn):hover{
+  transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--color-yellow);
+}
+/* הכפתור לא "קופץ" בנפרד — הכרטיס כולו הוא שמתרומם */
+ul.links li:has(> a.btn):hover > a.btn{transform:none;}
+
 /* ---------- תרגול (quiz) ---------- */
 .quiz{background:var(--color-bg);border:1px solid var(--color-line);border-radius:var(--radius-lg);
   padding:22px 24px;margin:18px 0;box-shadow:var(--shadow-sm);}
-.quiz__tag{display:inline-flex;align-items:center;gap:6px;background:var(--color-purple-soft);color:#4a47b0;
-  padding:4px 12px;border-radius:var(--radius-pill);font-size:.78rem;font-weight:800;margin-bottom:10px;}
+.quiz__tag{display:inline-flex;align-items:center;gap:0;background:none;color:var(--color-muted);
+  padding:0;border-radius:0;font-size:.8rem;font-weight:800;margin-bottom:10px;}
+.quiz__tag::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;
+  background:var(--color-purple);margin-inline-end:7px;}
 .quiz__q{font-size:1.14rem;font-weight:800;color:var(--color-ink);margin:0 0 14px;line-height:1.5;}
 .opts{display:grid;gap:10px;margin:10px 0;}
 .opt{display:block;background:var(--color-bg-soft);border:2px solid var(--color-line);border-radius:var(--radius-md);
@@ -155,7 +173,7 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .tl-item:nth-child(even) .dot{left:-11px;}
 .tl-card{background:var(--color-bg);border:1px solid var(--color-line);border-radius:var(--radius-md);
   padding:14px 18px;box-shadow:var(--shadow-sm);display:inline-block;text-align:right;}
-.tl-card b{font-family:var(--font-display);color:var(--color-ink);display:block;font-size:1.12rem;}
+.tl-card b{font-family:var(--font-display);color:var(--color-ink);display:block;font-size:1.7rem;line-height:1.15;}
 .tl-card .src{color:var(--color-teal-dark);font-weight:800;font-size:.82rem;}
 .tl-card p{margin:.3em 0 0;color:var(--color-muted);font-size:.94rem;}
 @media(max-width:640px){
@@ -171,17 +189,51 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 
 /* ---------- כלי עזר ---------- */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0;}
+/* תגיות מידע — טקסט בלבד, לא נראות כמו כפתורים לחיצים */
+.chips--static{gap:8px 22px;justify-content:center;align-items:center;}
+.chips--static .pill{
+  background:none;border:0;border-radius:0;box-shadow:none;gap:0;
+  padding:2px 0;color:var(--color-ink-soft);font-weight:600;font-size:1rem;cursor:default;
+}
+.chips--static .pill::before{
+  content:"";width:6px;height:6px;border-radius:50%;flex:none;
+  background:var(--color-teal);margin-inline-end:9px;
+}
+.chips--static .pill--success::before{background:var(--color-success);}
+.chips--static .pill--accent::before{background:#c9a227;}
+.chips--static .pill--success,.chips--static .pill--accent{color:var(--color-ink-soft);}
 .mt-s{margin-top:14px;}.mt-m{margin-top:24px;}
 .hero__title{font-weight:700;}
 @media(max-width:680px){.hero__title{font-size:2.2rem;}.section__title{font-size:1.6rem;}}
+/* =============================================================
+   כלל רוחבי: לחיץ מול לא-לחיץ
+   לחיץ   = צורת גלולה + צל תלת-ממדי + תגובת ריחוף (.btn, .nav a, .opt)
+   לא לחיץ = מלבן פינות-רכות או טקסט בלבד, בלי צל ובלי ריחוף (.pill, .fnode, .badge)
+   ============================================================= */
+/* ---------- קיקר של כותרת סקציה — הדגשה, לא כפתור ---------- */
+.section__kicker{
+  display:block;font-family:var(--font-sans);font-size:.82rem;font-weight:800;
+  letter-spacing:.02em;color:var(--color-teal-dark);margin-bottom:5px;
+}
+
+/* ---------- טאבים / מסננים — לחיצים ---------- */
+.tabpane[hidden]{display:none;}
+.page-head__filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+/* ---------- כפתורים: מראה תלת-ממדי כדי שיהיה ברור שהם לחיצים ---------- */
+.btn{box-shadow:0 3px 0 rgba(21,21,21,.20), 0 6px 14px rgba(21,21,21,.10);}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 rgba(21,21,21,.20), 0 11px 20px rgba(21,21,21,.13);}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(21,21,21,.20), 0 2px 6px rgba(21,21,21,.10);}
+
 @media print{.site-header,.foot,.btn,.nav{display:none;}}
 
 /* ---------- תגיות מקור (רשמי / תוספת) ---------- */
-.quiz__tag--official{background:#fbeec2;color:#7a5b08;}
-.quiz__tag--added{background:#e7e6fb;color:#4a45a8;}
+.quiz__tag--official{background:none;color:#8a6a12;}
+.quiz__tag--official::before{background:#c9a227;}
+.quiz__tag--added{background:none;color:#4a45a8;}
+.quiz__tag--added::before{background:var(--color-purple);}
 .quiz.is-official{border-inline-start:5px solid var(--color-yellow);}
 .quiz.is-added{border-inline-start:5px solid var(--color-purple);}
-.quiz .tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px;}
+.quiz .tags{display:flex;gap:6px 20px;flex-wrap:wrap;margin-bottom:8px;}
 .quiz .quiz__tag{margin-bottom:0;}
 .legend{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--color-bg);
   border:1px solid var(--color-line);border-radius:var(--radius-md);padding:12px 16px;margin:10px 0 4px;font-size:.95rem;}
@@ -252,15 +304,50 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .feedback .miss{color:#7a5b08;}
 
 /* טאבים לעמוד התרגול */
+/* ============================================================
+   מתג מוני השאלות  (QA בלבד)
+   ------------------------------------------------------------
+   המונים משמשים לבקרה בזמן הבנייה — כמה שאלות יש בכל נושא.
+   לפני העלאת האתר לאוויר: לשנות את השורה הבאה ל-  none
+   וכל המונים באתר ייעלמו בבת אחת. אין צורך לגעת בשום קובץ HTML.
+   ============================================================ */
+:root{ --qa-counts: inline-flex; }
+.tab__n, .qa-count{ display: var(--qa-counts) !important; }
+/* באנר המונה שבתוך עמוד התרגול נבנה ב-JS והוא בודק את אותו משתנה בעצמו. */
+
 .tabbar{position:sticky;top:0;z-index:40;background:var(--color-bg-soft);
   border-bottom:1px solid var(--color-line);box-shadow:var(--shadow-sm);}
-.tabbar__inner{max-width:var(--container);margin:0 auto;padding:8px var(--section-px);
-  display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;}
-.tab{white-space:nowrap;padding:8px 14px;border-radius:var(--radius-pill);border:0;cursor:pointer;
+.tabbar__inner{max-width:var(--container);margin:0 auto;padding:8px var(--section-px) 4px;
+  display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:auto;scrollbar-color:var(--color-teal-dark) var(--color-chip-bg);
+  scroll-behavior:smooth;overscroll-behavior-x:contain;}
+
+/* פס גלילה רחב וברור לדסקטופ — במובייל פשוט גוררים את הטאבים באצבע */
+.tabbar__inner::-webkit-scrollbar{height:16px;}
+.tabbar__inner::-webkit-scrollbar-track{
+  background:var(--color-chip-bg);border-radius:999px;margin:0 var(--section-px);}
+.tabbar__inner::-webkit-scrollbar-thumb{
+  background:var(--color-teal-dark);border-radius:999px;
+  border:4px solid var(--color-bg-soft);min-width:70px;}
+.tabbar__inner::-webkit-scrollbar-thumb:hover{background:#4c8b94;}
+.tabbar__inner::-webkit-scrollbar-thumb:active{background:#3f757d;}
+@media(hover:none){
+  .tabbar__inner::-webkit-scrollbar{height:6px;}
+  .tabbar__inner::-webkit-scrollbar-thumb{border-width:1px;}
+}
+.tab{white-space:nowrap;padding:7px 16px;border-radius:var(--radius-pill);border:0;cursor:pointer;
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1.25;
   background:var(--color-chip-bg);color:var(--color-ink-soft);font-weight:700;font-size:.9rem;
   font-family:inherit;transition:background .15s,color .15s;flex:0 0 auto;}
-.tab:hover{background:var(--color-chip-hover);}
-.tab.active{background:var(--color-teal);color:var(--color-ink);}
+.tab{box-shadow:0 2px 0 rgba(21,21,21,.12);
+  transition:transform var(--transition-fast),box-shadow var(--transition-fast),background var(--transition-fast);}
+.tab:hover{background:var(--color-chip-hover);transform:translateY(-2px);
+  box-shadow:0 4px 0 rgba(21,21,21,.14), 0 8px 14px rgba(21,21,21,.10);}
+.tab:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(21,21,21,.12);}
+.tab__t{display:inline-flex;align-items:center;}
+.tab__book{font-size:.72rem;font-weight:600;opacity:.72;}
+.tab.active,.tab--active{background:var(--color-teal);color:var(--color-ink);
+  box-shadow:0 3px 0 rgba(21,21,21,.18), 0 6px 14px rgba(21,21,21,.10);}
 
 /* שאלות התאמה/בחירה — פריטים ובנק אפשרויות */
 .qmatch{list-style:none;padding:0;margin:8px 0;}
@@ -300,3 +387,140 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .mitem,.mopt{position:relative;z-index:2;}
 .mitem.wrong,.mopt.wrong{border-color:var(--color-error);background:var(--color-error-bg);color:var(--color-error);}
 .matchcheck{margin-top:6px;}
+
+
+/* ---------- פירורי לחם ---------- */
+.crumbs{max-width:var(--container);margin:0 auto;padding:12px var(--section-px) 0;font-size:.9rem;display:flex;gap:7px;flex-wrap:wrap;align-items:center;}
+.crumbs a{color:var(--color-teal-dark);text-decoration:none;font-weight:700;}
+.crumbs a:hover{text-decoration:underline;}
+.crumbs span{color:var(--color-muted);}
+.crumbs__cur{color:var(--color-ink-soft);font-weight:700;}
+
+/* ---------- Hero: אריחי "מה יש כאן" ---------- */
+.hero__tiles{
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px;
+}
+.hero__tiles .icon-tile{
+  background:rgba(255,255,255,.62);min-width:118px;
+  border:1px solid rgba(255,255,255,.85);
+}
+.hero__tiles .icon-tile:hover{background:var(--color-bg);}
+.hero__tiles .icon-tile__label{font-weight:800;font-size:.95rem;}
+@media(max-width:680px){
+  .hero__tiles .icon-tile{min-width:0;flex:1 1 40%;padding:12px 8px;}
+}
+
+/* כרטיסי הצירים — הכותרת בפונט הדקורטיבי, צריכה להיות גדולה כדי לבלוט */
+.feature-card__title{font-size:2rem;line-height:1.1;margin:0 0 10px;}
+.feature-card__desc{font-size:1rem;line-height:1.6;}
+@media(max-width:680px){.feature-card__title{font-size:1.7rem;}}
+
+/* כרטיסי ה-KPI הלבנים — תוכן ממורכז (פס הצבע נשאר בצד כפי שהיה) */
+.kpi{text-align:center;}
+.kpi__label,.kpi__value,.kpi__sub{text-align:center;}
+
+/* פאנל תוכן — התאמות לעמוד הבית */
+.panel .badge{margin-bottom:10px;}
+.panel .verse{font-size:1rem;line-height:1.8;}
+
+/* ---------- עצי משפחה — אילן יוחסין עם ענפים ---------- */
+.ftree{
+  --branch:#c9a227; --branch-soft:#e2d29b;
+  background:var(--color-bg);border:1px solid var(--color-line);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-sm);margin:16px 0 6px;padding:30px 18px 30px;overflow-x:auto;
+}
+.ftree__inner{min-width:max-content;margin:0 auto;}
+
+.ftree__gen{position:relative;}
+.ftree__gen + .ftree__gen{margin-top:48px;}
+.ftree__gen + .ftree__gen::before{           /* הגזע — הקו האנכי שיורד מדור לדור */
+  content:"";position:absolute;top:-48px;left:50%;transform:translateX(-50%);
+  width:3px;height:48px;background:var(--branch);border-radius:3px;
+}
+.ftree__lbl{
+  position:absolute;top:-42px;inset-inline-start:0;z-index:2;
+  font-weight:800;font-size:.78rem;color:var(--color-teal-dark);background:var(--color-teal-bg);
+  padding:3px 11px;border-radius:var(--radius-pill);white-space:nowrap;
+}
+.ftree__gen:first-child .ftree__lbl{position:static;display:inline-block;margin-bottom:10px;}
+
+.ftree__nodes{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:nowrap;}
+
+/* צומת */
+.fnode{
+  display:inline-block;background:var(--color-bg-soft);border:1px solid var(--color-line);
+  border-radius:10px;padding:8px 15px;font-weight:700;font-size:1rem;
+  color:var(--color-ink);white-space:nowrap;
+}
+.fnode--key{background:var(--color-teal-bg);border-color:var(--color-teal);}
+.fnode--root{background:var(--color-mint-soft);border-color:var(--color-mint-dark);}
+.fnode--soft{background:transparent;border-style:dashed;color:var(--color-muted);font-weight:600;}
+
+/* בני זוג */
+.fcouple{display:inline-flex;align-items:center;gap:8px;}
+.fwives{display:inline-flex;align-items:center;gap:6px;}
+.fjoin{color:var(--branch);font-weight:800;font-size:1.05rem;padding:0 1px;}
+
+/* ענף צדדי (אח / אשה נוספת) */
+.fside{display:inline-flex;align-items:center;}
+.fside::before{content:"";flex:none;width:32px;border-top:2px dashed var(--branch-soft);margin-inline-end:10px;}
+.fside__cap{color:var(--color-muted);font-size:.78rem;margin-inline-start:7px;white-space:nowrap;}
+
+/* התפצלות לענפים — קו אופקי + זרוע אנכית לכל ילד */
+.fan{display:flex;justify-content:center;flex-wrap:nowrap;}
+.fan__item{position:relative;padding:28px 5px 0;}
+.fan__item::after{                            /* הקו האופקי (הענף הראשי) */
+  content:"";position:absolute;top:0;inset-inline:0;height:3px;background:var(--branch);
+}
+.fan__item:first-child::after{inset-inline-start:50%;border-start-start-radius:3px;}
+.fan__item:last-child::after{inset-inline-end:50%;border-start-end-radius:3px;}
+.fan__item::before{                           /* הזרוע האנכית לצומת */
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:3px;height:28px;background:var(--branch);border-radius:3px;
+}
+
+/* תווית סטטית כללית — מלבן פינות רכות, בלי צל */
+.tag{display:inline-flex;align-items:center;gap:6px;background:var(--color-bg-soft);
+  border:1px solid var(--color-line);border-radius:9px;padding:5px 12px;
+  font-size:.88rem;font-weight:700;color:var(--color-ink-soft);cursor:default;}
+.tag--teal{background:var(--color-teal-bg);border-color:var(--color-teal);color:#2f6a72;}
+.tag--soft{background:transparent;border-style:dashed;color:var(--color-muted);font-weight:600;}
+
+.ftree__note{margin:16px 0 0;color:var(--color-muted);font-size:.92rem;line-height:1.6;text-align:center;}
+.ftree__hint{display:none;}
+@media(max-width:900px){
+  .ftree__hint{display:block;text-align:center;color:var(--color-muted);font-size:.82rem;margin:0 0 16px;}
+}
+@media(max-width:600px){
+  .ftree{padding:26px 12px;}
+  .fnode{padding:6px 12px;font-size:.92rem;}
+  .fside::before{width:20px;margin-inline-end:7px;}
+}
+
+/* ---------- דמויות מפתח (במקום טבלה) ---------- */
+.figures{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:14px 0;}
+.figure{background:var(--color-bg-soft);border:1px solid var(--color-line);border-radius:var(--radius-md);
+  padding:12px 15px;border-inline-start:5px solid var(--color-teal);}
+.figure__name{display:block;font-family:var(--font-display);font-size:1.65rem;line-height:1.15;color:var(--color-ink);}
+.figure__desc{display:block;color:var(--color-muted);font-size:.94rem;line-height:1.6;margin-top:2px;}
+
+/* כרטיס דמות עם כפתור "לתרגול" — כל הכרטיס לחיץ */
+.figure{position:relative;}
+.figure__go{display:inline-flex;margin-top:12px;position:relative;z-index:2;}
+.figure__go::after{content:"";position:absolute;inset:0;z-index:1;border-radius:var(--radius-md);}
+.figure:has(.figure__go){
+  cursor:pointer;
+  transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
+}
+.figure:has(.figure__go):hover{
+  transform:translateY(-2px);box-shadow:var(--shadow-md);border-inline-start-color:var(--color-yellow);
+}
+.figure:has(.figure__go):hover .figure__go{transform:none;}
+
+/* ---------- מונה שאלות ---------- */
+.tab__n{display:inline-block;background:rgba(0,0,0,.09);border-radius:var(--radius-pill);
+  padding:1px 7px;font-size:.78rem;margin-inline-start:4px;font-weight:800;}
+.tab.active .tab__n{background:rgba(255,255,255,.6);}
+.topic-count{display:inline-flex;align-items:center;gap:7px;background:var(--color-teal-bg);
+  color:var(--color-teal-dark);font-weight:800;font-size:.9rem;padding:5px 13px;
+  border-radius:var(--radius-pill);margin:2px 0 12px;}

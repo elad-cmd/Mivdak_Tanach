@@ -12,59 +12,68 @@
 <body>
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand__logo">ת</span>
-      <span class="brand__name">מאגר מבדק תנ״ך<small>כיתה ו' · תנופה תשפ"ו</small></span>
+      <span class="brand__name">מבדק תנ"ך<small>כיתה ו' · תנופה תשפ"ז</small></span>
     </a>
     <nav class="nav">
-      <a href="index.html">בית</a>
-      <a href="matzeget.html">על המבדק</a>
-      <a href="nosim.html" class="active">נושאים וסיכומים</a>
+      <a href="./">בית</a>
+      <a href="tochniot.html">תכניות לימודים</a>
+      <a href="morim.html">מערכי שיעור</a>
+      <a href="nosim.html" class="active">נושאים</a>
+      <a href="ezrim.html">עזרי הוראה</a>
       <a href="tirgul.html">תרגול</a>
-      <a href="zman.html">ציר זמן</a>
-      <a href="morim.html">אזור מורה</a>
       <a href="mekorot.html">מקורות</a>
     </nav>
   </div>
 </header>
+<nav class="crumbs" aria-label="פירורי לחם">
+  <a href="./">בית</a><span>›</span><span class="crumbs__cur">נושאים וסיכומים</span>
+</nav>
+
 
 <main>
   <div class="page-head page-head--center container">
     <h1 class="page-head__title">נושאים וסיכומים</h1>
     <p class="page-head__subtitle">כל מה שבמפרט — מסודר לפי שלושת הצירים: ידע · מיומנויות · ערכים</p>
-    <div class="page-head__filters">
-      <a class="pill pill--md pill--accent" href="#sipurim">סיפורי היסוד</a>
-      <a class="pill pill--md" href="#yehoshua">יהושע</a>
-      <a class="pill pill--md" href="#shoftim">שופטים</a>
-      <a class="pill pill--md" href="#dmuyot">דמויות</a>
-      <a class="pill pill--md" href="#lashon">לשון</a>
-      <a class="pill pill--md" href="#erachim">ערכים</a>
-      <a class="pill pill--md" href="#geo">מפות</a>
+    <div class="page-head__filters" role="tablist">
+      <button type="button" class="tab" data-pane="zman">ציר זמן</button>
+      <button type="button" class="tab" data-pane="sipurim">סיפורי היסוד</button>
+      <button type="button" class="tab" data-pane="yehoshua">יהושע</button>
+      <button type="button" class="tab" data-pane="shoftim">שופטים</button>
+      <button type="button" class="tab" data-pane="dmuyot">דמויות מפתח</button>
+      <button type="button" class="tab" data-pane="lashon">מיומנויות</button>
+      <button type="button" class="tab" data-pane="erachim">ערכים</button>
     </div>
   </div>
-
   <section class="section">
     <div class="section__inner">
-      <div class="panel" id="sipurim">
+      <div class="tabpane" id="pane-zman">
+        <div class="panel">
+          <h2><i class="fa-solid fa-timeline" style="color:var(--color-teal-dark)"></i> ציר זמן תנ"כי — מהבריאה עד השופטים</h2>
+          <p>הרצף ההיסטורי המלא: אירועים, דמויות ותקופות לפי הסדר — הבסיס לשאלות "מה קרה קודם?".</p>
+          <p class="mt-s"><a class="btn" href="zman.html"><i class="fa-solid fa-arrow-left"></i> לציר הזמן המלא</a></p>
+        </div>
+      </div>
+      <div class="tabpane" id="pane-sipurim">
+        <div class="panel">
         <h2><i class="fa-solid fa-scroll" style="color:var(--color-teal-dark)"></i> רצף סיפורי היסוד — מהבריאה עד המלוכה</h2>
         <p>זהו "עמוד השדרה" של הידע במבדק. כדאי להכיר את הרצף ההיסטורי כדי למקם כל סיפור במקומו.</p>
         <table class="t">
           <tr><th>ספר</th><th>מה לומדים</th></tr>
           <tr><td><b>בראשית</b></td><td>סיפורי האבות — אברהם, יצחק, יעקב ויוסף.</td></tr>
           <tr><td><b>שמות</b></td><td>שעבוד מצרים והיציאה ממצרים.</td></tr>
+          <tr><td><b>ויקרא</b></td><td>חוקים חברתיים ומוסריים — ויקרא י"ט.</td></tr>
           <tr><td><b>במדבר</b></td><td>ההליכה במדבר מהר סיני לארץ כנען, מעמד הר סיני, בניית המשכן.</td></tr>
           <tr><td><b>דברים</b></td><td>נאומי משה לפני הכניסה לארץ.</td></tr>
           <tr><td><b>יהושע</b></td><td>כיבוש הארץ והנחלות — הכניסה, כיבוש יריחו והעי.</td></tr>
           <tr><td><b>שופטים</b></td><td>מעגל תקופת השופטים — דבורה, גדעון, שמשון.</td></tr>
         </table>
         <div class="alert alert--info mt-s"><span class="alert__icon"><i class="fa-solid fa-circle-info"></i></span><div class="alert__body">המבדק בוחן גם <b>ידע קרוב</b> (ה'–ו', בעיקר יהושע ושופטים) וגם <b>ידע רחוק</b> — פרקי יסוד מכל שנות היסודי.</div></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="section__inner">
-      <div class="panel" id="yehoshua">
+      <div class="tabpane" id="pane-yehoshua">
+        <div class="panel">
         <h2><i class="fa-solid fa-map-location-dot" style="color:var(--color-teal-dark)"></i> ספר יהושע — כיבוש הארץ והתנחלות</h2>
         <p>הנושא המרכזי של כיתה ו'. בני ישראל נכנסים לארץ כנען בהנהגת יהושע בן נון, יורשו של משה.</p>
         <h3>נקודות מפתח</h3>
@@ -78,55 +87,52 @@
           <li><b>מות יהושע</b> — נאום פרידה וסיום התקופה.</li>
         </ul>
         <div class="verse">"כֹּל אֲשֶׁר צִוִּיתָנוּ נַעֲשֶׂה, וְאֶל כָּל אֲשֶׁר תִּשְׁלָחֵנוּ נֵלֵךְ" (יהושע א', ט"ז) — מילת המפתח <b>"נעשה"</b> מבטאת מחויבות ואחדות.</div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section__inner">
-      <div class="panel" id="shoftim">
+      <div class="tabpane" id="pane-shoftim">
+        <div class="panel">
         <h2><i class="fa-solid fa-gavel" style="color:var(--color-teal-dark)"></i> ספר שופטים — המעגל החוזר</h2>
-        <p>לאחר מות יהושע אין מנהיג אחד. הספר בנוי על <b>מעגל חוזר</b> בארבעה שלבים:</p>
-        <div class="grid grid--4 mt-s">
-          <div class="kpi kpi--accent-yellow"><div class="kpi__label">שלב 1</div><div class="kpi__value" style="font-size:1.3rem">חֵטְא</div><div class="kpi__sub">העם עוזב את ה'</div></div>
-          <div class="kpi kpi--accent-teal"><div class="kpi__label">שלב 2</div><div class="kpi__value" style="font-size:1.3rem">עונש</div><div class="kpi__sub">אויב משעבד את העם</div></div>
-          <div class="kpi kpi--accent-purple"><div class="kpi__label">שלב 3</div><div class="kpi__value" style="font-size:1.3rem">זעקה</div><div class="kpi__sub">העם זועק לעזרה</div></div>
-          <div class="kpi kpi--accent-mint"><div class="kpi__label">שלב 4</div><div class="kpi__value" style="font-size:1.3rem">הצלה</div><div class="kpi__sub">ה' מקים שופט מושיע</div></div>
-        </div>
-        <h3>השופטים המרכזיים שבמפרט</h3>
-        <div class="grid grid--3">
-          <div class="feature-card feature-card--mint"><h3 class="feature-card__title">דבורה</h3><p class="feature-card__desc">נביאה ושופטת. עם ברק ניצחה את סיסרא ושר צבא כנען (שופטים ד'–ה').</p></div>
-          <div class="feature-card feature-card--yellow"><h3 class="feature-card__title">גדעון</h3><p class="feature-card__desc">מנהיג צנוע שניצח את מדיין עם 300 לוחמים בלבד (שופטים ו'–ח').</p></div>
-          <div class="feature-card feature-card--blue"><h3 class="feature-card__title">שמשון</h3><p class="feature-card__desc">נזיר מבטן בעל כוח עצום שנלחם בפלשתים (שופטים י"ג–ט"ז).</p></div>
+        <p>לאחר מות יהושע אין מנהיג אחד. הספר בנוי על <b>מעגל חוזר</b> שמסתובב שוב ושוב: חֵטְא ← עונש ← זעקה ← הצלה.</p>
+        <h3>נקודות מפתח</h3>
+        <ul>
+          <li><b>חֵטְא</b> — העם עוזב את ה' והולך אחרי אלוהים אחרים.</li>
+          <li><b>עונש</b> — אויב שכן משעבד את ישראל.</li>
+          <li><b>זעקה</b> — העם זועק לעזרה.</li>
+          <li><b>הצלה</b> — ה' מקים שופט מושיע, ואז המעגל מתחיל מחדש.</li>
+          <li><b>דבורה</b> — נביאה ושופטת. יחד עם ברק ניצחה את סיסרא, שר צבא כנען (שופטים ד'–ה').</li>
+          <li><b>גדעון</b> — מנהיג צנוע שניצח את מדיין עם 300 לוחמים בלבד (שופטים ו'–ח').</li>
+          <li><b>שמשון</b> — נזיר מבטן בעל כוח עצום שנלחם בפלשתים (שופטים י"ג–ט"ז).</li>
+          <li><b>סוף התקופה</b> — אין מנהיג קבוע, וכל אחד עושה כרצונו — הרקע לבקשת מלך.</li>
+        </ul>
+        <div class="verse">"וַיַּעֲשׂוּ בְנֵי יִשְׂרָאֵל הָרַע בְּעֵינֵי ה'" (שופטים ב', י"א) — הפסוק החוזר שפותח כל סיבוב במעגל.</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="section__inner">
-      <div class="panel" id="dmuyot">
+      <div class="tabpane" id="pane-dmuyot">
+        <div class="panel">
         <h2><i class="fa-solid fa-users" style="color:var(--color-teal-dark)"></i> דמויות מפתח — "למי נאמר?" ו"מי עשה?"</h2>
-        <p>ביחידת פרקי היסוד נבחנת בקיאות בדמויות ובמעשיהן. טבלה לחזרה מהירה:</p>
-        <table class="t">
-          <tr><th>הדמות</th><th>מי זה / מה עשה</th></tr>
-          <tr><td>אברהם</td><td>אבי האומה. "לֶךְ לְךָ מֵאַרְצְךָ... אֶל הָאָרֶץ אֲשֶׁר אַרְאֶךָּ".</td></tr>
-          <tr><td>יצחק</td><td>בנם של אברהם ושרה; אביהם של יעקב ועשיו.</td></tr>
-          <tr><td>יעקב (ישראל)</td><td>אבי שנים-עשר השבטים; אהב את יוסף ועשה לו כתונת פסים.</td></tr>
-          <tr><td>יוסף</td><td>חלם חלומות; נמכר לעבד וירד למצרים; סלח לאחיו.</td></tr>
-          <tr><td>משה</td><td>הוציא את ישראל ממצרים. "שַׁל נְעָלֶיךָ" — נאמר לו בסנה.</td></tr>
-          <tr><td>יהושע</td><td>יורש משה; הכניס את העם לארץ.</td></tr>
-          <tr><td>בת פרעה</td><td>הצילה את משה התינוק מן היאור.</td></tr>
-          <tr><td>רבקה</td><td>השקתה את גמלי עבד אברהם — סימן לאשת יצחק.</td></tr>
-        </table>
+        <p>ביחידת פרקי היסוד נבחנת בקיאות בדמויות ובמעשיהן — לפי הסדר המשפחתי‑כרונולוגי:</p>
+        <div class="figures">
+          <div class="figure"><b class="figure__name">אברהם</b><span class="figure__desc">אבי האומה. “לֶךְ לְךָ מֵאַרְצְךָ... אֶל הָאָרֶץ אֲשֶׁר אַרְאֶךָּ”.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=avraham"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">שרה</b><span class="figure__desc">אשת אברהם ואם האומה; ילדה את יצחק בזקנתה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=sara"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">יצחק</b><span class="figure__desc">בנם של אברהם ושרה; אבי יעקב ועשיו.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=yitzhak"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">רבקה</b><span class="figure__desc">אשת יצחק. השקתה את גמלי עבד אברהם — הסימן שנבחרה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=rivka"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">יעקב (ישראל)</b><span class="figure__desc">אבי שנים‑עשר השבטים; אהב את יוסף ועשה לו כתונת פסים.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=yaakov"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">עֵשָׂו</b><span class="figure__desc">אחיו התאום של יעקב; מכר לו את הבכורה בנזיד עדשים.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=esav"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">רחל</b><span class="figure__desc">אשתו האהובה של יעקב; אמם של יוסף ובנימין.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=rachel"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">לאה</b><span class="figure__desc">אשתו הראשונה של יעקב; אם ששה מהשבטים ודינה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=lea"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">יוסף</b><span class="figure__desc">חלם חלומות; נמכר לעבד וירד למצרים; סלח לאחיו.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=yosef"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">משה</b><span class="figure__desc">הוציא את ישראל ממצרים. “שַׁל נְעָלֶיךָ” — נאמר לו בסנה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=moshe"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">אהרון</b><span class="figure__desc">אחיו של משה; הכהן הראשון ודוברו של משה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=aharon"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">יהושע</b><span class="figure__desc">יורשו של משה; הכניס את העם לארץ וכבש אותה.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=yehoshua"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">דבורה</b><span class="figure__desc">נביאה ושופטת; יצאה עם ברק למלחמה בסיסרא.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=dvora"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">גדעון</b><span class="figure__desc">שופט שהכה במדיָן עם שלוש מאות איש בלבד.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=gidon"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+          <div class="figure"><b class="figure__name">שמשון</b><span class="figure__desc">נזיר מבטן; גיבור עצום שנלחם בפלישתים.</span><a class="btn btn--sm figure__go" href="dmuyot-tirgul.html?d=shimshon"><i class="fa-solid fa-pen-to-square"></i> לתרגול</a></div>
+        </div>
         <div class="alert alert--warning mt-s"><span class="alert__icon"><i class="fa-solid fa-star"></i></span><div class="alert__body"><b>טיפ:</b> בחלק "עצי משפחה" כדאי לדעת את שושלת האבות (אברהם ← יצחק ← יעקב) ואת שמות שנים-עשר השבטים. שימו לב: <b>אהרן</b> ו<b>יעקב</b> אינם שמות של שבטים!</div></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section__inner">
-      <div class="panel" id="lashon">
+      <div class="tabpane" id="pane-lashon">
+        <div class="panel">
         <h2><i class="fa-solid fa-language" style="color:var(--color-teal-dark)"></i> לשון התנ"ך ומיומנויות עיון</h2>
         <h3>תופעות לשון לזיהוי</h3>
         <table class="t">
@@ -137,7 +143,13 @@
           <tr><td>כינויי מושא חבורים</td><td>כינוי המחובר לפועל: "הַשְׁקִינִי" = השקה אותי.</td></tr>
         </table>
         <h3>אמצעים ספרותיים</h3>
-        <div class="chips"><span class="pill pill--md">דו-שיח</span><span class="pill pill--md">מילים מנחות</span><span class="pill pill--md">פערים</span><span class="pill pill--md">חזרתיות</span><span class="pill pill--md">ריבוי פעלים</span></div>
+        <ul>
+          <li><b>דו-שיח</b> — הסיפור המקראי מתקדם דרך דיבור ישיר בין הדמויות, ולא דרך תיאור של המספר.</li>
+          <li><b>מילים מנחות</b> — מילה שחוזרת שוב ושוב בפרק ומסמנת את הרעיון המרכזי שלו.</li>
+          <li><b>פערים</b> — הכתוב משאיר בכוונה מידע חסר, והקורא משלים אותו מתוך ההקשר.</li>
+          <li><b>חזרתיות</b> — חזרה על ביטוי, מספר או מבנה — להדגשה, ליצירת קצב או לסימון שלבים.</li>
+          <li><b>ריבוי פעלים</b> — רצף פעלים צפוף שיוצר תחושת מהירות ופעולה רצופה.</li>
+        </ul>
         <h3>מיומנויות עיון בטקסט</h3>
         <ul>
           <li>איסוף פרטי מידע וארגונם לתמונה שלמה.</li>
@@ -146,13 +158,10 @@
           <li>הסקת מסקנות לגבי רעיונות, רגשות ומעשים, והשוואה בין דמויות ואירועים.</li>
           <li><b>ציטוט מול שכתוב</b> — מתי מעתיקים מהפסוק ומתי כותבים בלשון שלי.</li>
         </ul>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="section__inner">
-      <div class="panel" id="erachim">
+      <div class="tabpane" id="pane-erachim">
+        <div class="panel">
         <h2><i class="fa-solid fa-scale-balanced" style="color:var(--color-teal-dark)"></i> ערכים — "מה אפשר ללמוד מזה?"</h2>
         <div class="grid grid--3 mt-s">
           <div class="feature-card feature-card--purple"><h3 class="feature-card__title">זהות ושייכות</h3><p class="feature-card__desc">היווצרות העם, קיום הבטחות, חירות. התנ"ך כספר הזהות המשותף.</p></div>
@@ -169,22 +178,14 @@
           <tr><td>"כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר"</td><td>יחס שוויוני לזר</td></tr>
           <tr><td>"וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ"</td><td>אהבת הזולת</td></tr>
         </table>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="section__inner">
-      <div class="panel" id="geo">
-        <h2><i class="fa-solid fa-compass" style="color:var(--color-teal-dark)"></i> מפות והקשרים גיאוגרפיים</h2>
-        <p>המבדק כולל שאלות מפה: זיהוי אתרים, אזורים, דרכים וגבולות, והפקת מידע מהמפה.</p>
-        <div class="chips"><span class="pill pill--md">מצרים</span><span class="pill pill--md">מדבר סיני</span><span class="pill pill--md">הר סיני</span><span class="pill pill--md">נהר הירדן</span><span class="pill pill--md">יריחו</span><span class="pill pill--md">העי</span><span class="pill pill--md">ארץ כנען</span><span class="pill pill--md">עבר הירדן המזרחי</span></div>
-        <div class="center mt-m">
-          <a class="btn" target="_blank" rel="noopener" href="https://edu.929.org.il/%d7%97%d7%95%d7%9e%d7%a8%d7%99-%d7%9c%d7%9e%d7%99%d7%93%d7%94-%d7%95%d7%94%d7%a2%d7%a9%d7%a8%d7%94/%d7%9e%d7%a4%d7%94-%d7%9e%d7%9c%d7%90%d7%94/"><i class="fa-solid fa-map"></i> מפת המקומות בתנ"ך (929)</a>
-          <a class="btn btn--ghost" href="zman.html">לציר הזמן</a>
-        </div>
-      </div>
-      <div class="center mt-m"><a class="btn btn--lg btn--mint" href="tirgul.html"><i class="fa-solid fa-pen-to-square"></i> עכשיו לתרגול</a></div>
+      <div class="center mt-m"><a class="btn btn--lg" href="tirgul.html"><i class="fa-solid fa-pen-to-square"></i> עכשיו לתרגול</a></div>
     </div>
   </section>
 </main>
@@ -195,5 +196,21 @@
     <div>הסיכומים מבוססים על מפרט המבדק ותכנית הלימודים הרשמית</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab[data-pane]'));
+  var panes=[].slice.call(document.querySelectorAll('.tabpane'));
+  function show(id){
+    panes.forEach(function(p){p.hidden = (p.id !== 'pane-'+id);});
+    tabs.forEach(function(t){t.classList.toggle('tab--active', t.getAttribute('data-pane')===id);});
+    if(history.replaceState) history.replaceState(null,'','#'+id);
+  }
+  tabs.forEach(function(t){ t.addEventListener('click',function(){show(t.getAttribute('data-pane'));}); });
+  var want=(location.hash||'').replace('#','');
+  if(!panes.some(function(p){return p.id==='pane-'+want;})) want=tabs[0].getAttribute('data-pane');
+  show(want);
+})();
+</script>
 </body>
 </html>

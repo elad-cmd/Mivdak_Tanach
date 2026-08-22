@@ -12,21 +12,25 @@
 <body>
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand__logo">ת</span>
-      <span class="brand__name">מאגר מבדק תנ״ך<small>כיתה ו' · תנופה תשפ"ו</small></span>
+      <span class="brand__name">מבדק תנ"ך<small>כיתה ו' · תנופה תשפ"ז</small></span>
     </a>
     <nav class="nav">
-      <a href="index.html">בית</a>
-      <a href="matzeget.html" class="active">על המבדק</a>
-      <a href="nosim.html">נושאים וסיכומים</a>
+      <a href="./">בית</a>
+      <a href="tochniot.html">תכניות לימודים</a>
+      <a href="morim.html">מערכי שיעור</a>
+      <a href="nosim.html">נושאים</a>
+      <a href="ezrim.html">עזרי הוראה</a>
       <a href="tirgul.html">תרגול</a>
-      <a href="zman.html">ציר זמן</a>
-      <a href="morim.html">אזור מורה</a>
       <a href="mekorot.html">מקורות</a>
     </nav>
   </div>
 </header>
+<nav class="crumbs" aria-label="פירורי לחם">
+  <a href="./">בית</a><span>›</span><span class="crumbs__cur">על המבדק</span>
+</nav>
+
 
 <main>
   <div class="container" style="text-align:center;padding:16px 16px 2px">
@@ -40,7 +44,7 @@
 
         <!-- 1 · שער -->
         <div class="slide slide--cover active">
-          <span class="slide__kicker">תנופה · תשפ"ו</span>
+          <span class="slide__kicker">תנופה · תשפ"ז</span>
           <h2>מבדק תנ״ך לכיתה ו'</h2>
           <p style="font-size:1.35rem;max-width:680px">היכרות עם המבחן — שלושת הצירים, שלוש היחידות, חלוקת המשקלים, סוגי השאלות, ושאלות אמיתיות לדוגמה בכל חלק.</p>
           <p class="muted" style="margin-top:22px"><i class="fa-solid fa-hand-pointer"></i> לחצו "הבא" כדי להתחיל</p>
@@ -95,9 +99,9 @@
           <span class="slide__kicker">איך נראות השאלות</span>
           <h2>סוגי השאלות</h2>
           <p style="margin-bottom:10px">במבדק כ-23 שאלות מסוגים מגוונים — כדאי להכיר את כולם:</p>
-          <div class="chips">
+          <div class="chips chips--static">
             <span class="pill pill--md">שאלות פתוחות</span>
-            <span class="pill pill--md pill--accent">רב-ברירה (אמריקאיות)</span>
+            <span class="pill pill--md">רב-ברירה (אמריקאיות)</span>
             <span class="pill pill--md">קלוז</span>
             <span class="pill pill--md">השלמת משפטים</span>
             <span class="pill pill--md">היגדים (נכון/לא נכון)</span>
@@ -114,7 +118,7 @@
           <span class="slide__kicker">יום הבחינה</span>
           <h2>איך זה עובד בפועל?</h2>
           <ul class="links" style="margin-top:6px">
-            <li><div class="meta"><b>מתכונת</b><span>בתשפ"ו — משימה פנימית בבית הספר. מתשפ"ז — מבחן חיצוני כמו מבחני תנופה.</span></div></li>
+            <li><div class="meta"><b>מתכונת</b><span>החל מתשפ"ז — מבחן חיצוני של ראמ"ה, במתכונת מבחני תנופה. (בתשפ"ו התקיים כמשימה פנימית בבית הספר.)</span></div></li>
             <li><div class="meta"><b>משך</b><span>כ-90 דקות (אפשר לבקש תוספת זמן מהמורה).</span></div></li>
             <li><div class="meta"><b>עזרים מותרים</b><span>תנ"ך שלם ללא פירושים — לכן חשוב להתאמן בניווט מהיר בין הפרקים.</span></div></li>
             <li><div class="meta"><b>מטרת המבדק</b><span>מיפוי רמת השליטה לשם קידום ההוראה — ולא "ציון בתעודה".</span></div></li>
@@ -162,10 +166,6 @@
           <span class="slide__kicker">מוכנים!</span>
           <h2>זהו — עכשיו לתרגול</h2>
           <p style="font-size:1.3rem;max-width:640px">הכרתם את מבנה המבחן ושלושת חלקיו. הדרך הכי טובה להתכונן — לתרגל שאלות אמיתיות בכל נושא.</p>
-          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-            <a class="btn btn--lg" href="tirgul.html"><i class="fa-solid fa-pen-to-square"></i> למאגר התרגול</a>
-            <a class="btn btn--lg btn--ghost" href="nosim.html">לסיכומי הנושאים</a>
-          </div>
         </div>
 
       </div>
@@ -177,7 +177,7 @@
           <div class="deck__dots" id="dots"></div>
         </div>
         <div class="deck__nav">
-          <button class="btn btn--ghost" id="prevBtn"><i class="fa-solid fa-chevron-right"></i> הקודם</button>
+          <button class="btn" id="prevBtn"><i class="fa-solid fa-chevron-right"></i> הקודם</button>
           <button class="btn" id="nextBtn">הבא <i class="fa-solid fa-chevron-left"></i></button>
         </div>
       </div>
