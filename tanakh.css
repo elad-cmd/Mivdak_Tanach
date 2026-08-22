@@ -23,6 +23,11 @@
   font-weight:300;font-style:normal;font-display:swap;
 }
 
+/* ---------- אסימוני צבע נוספים ---------- */
+:root{
+  --color-teal-soft:#a5dbe1;   /* טורקיז בהיר — טאב פעיל בסרגלים הפנימיים */
+}
+
 /* ---------- בסיס ---------- */
 body{background:var(--color-bg);}
 .container{max-width:var(--container);margin:0 auto;padding:0 var(--section-px);}
@@ -34,7 +39,12 @@ a{color:inherit;}
 .site-header{
   position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.92);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--color-line);
+  transition:transform .25s ease;will-change:transform;
 }
+/* גוללים למטה — הסרגל נעלם. גוללים למעלה — חוזר מיד (ראו site.js) */
+body.hdr-hidden .site-header{transform:translateY(-100%);}
+body.hdr-hidden .tabbar{top:0 !important;}
+@media(prefers-reduced-motion:reduce){.site-header{transition:none;}}
 .site-header__inner{
   max-width:var(--container);margin:0 auto;padding:12px var(--section-px);
   display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
@@ -54,7 +64,7 @@ a{color:inherit;}
   text-decoration:none;
 }
 .nav a:hover{background:var(--color-chip-hover);}
-.nav a.active{background:var(--color-teal);color:var(--color-ink);}
+.nav a.active,.nav a.active:hover{background:var(--color-teal-dark);color:var(--color-ink);}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -221,6 +231,9 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .page-head__filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
 /* ---------- כפתורים: מראה תלת-ממדי כדי שיהיה ברור שהם לחיצים ---------- */
 .btn{box-shadow:0 3px 0 rgba(21,21,21,.20), 0 6px 14px rgba(21,21,21,.10);}
+/* כפתור "בדיקה" שבתוך שאלת תרגול — צהוב בהיר יותר, כדי להבדילו מכפתורי הניווט */
+.checkbtn{background:var(--color-yellow-light);}
+.checkbtn:hover{background:#fff0a0;}
 .btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 rgba(21,21,21,.20), 0 11px 20px rgba(21,21,21,.13);}
 .btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(21,21,21,.20), 0 2px 6px rgba(21,21,21,.10);}
 
@@ -346,8 +359,11 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .tab:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(21,21,21,.12);}
 .tab__t{display:inline-flex;align-items:center;}
 .tab__book{font-size:.72rem;font-weight:600;opacity:.72;}
-.tab.active,.tab--active{background:var(--color-teal);color:var(--color-ink);
+.tab.active,.tab--active,
+.tab.active:hover,.tab--active:hover{
+  background:var(--color-teal-soft);color:var(--color-ink);
   box-shadow:0 3px 0 rgba(21,21,21,.18), 0 6px 14px rgba(21,21,21,.10);}
+.tab.active:hover,.tab--active:hover{transform:translateY(-2px);}
 
 /* שאלות התאמה/בחירה — פריטים ובנק אפשרויות */
 .qmatch{list-style:none;padding:0;margin:8px 0;}
