@@ -10,33 +10,44 @@ function norm(s){
     .replace(/\s+/g,'')
     .replace(/[ךםןףץ]/g,function(c){return {'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ'}[c];});
 }
-document.querySelectorAll('.quiz[data-type="mc"]').forEach(function(q){
-  var opts=q.querySelectorAll('.opt');
+function addRetry(q, onReset){
   var fb=q.querySelector('.feedback');
-  var tries=0;
+  var b=document.createElement('button');
+  b.type='button'; b.className='retry'; b.hidden=true;
+  b.innerHTML='<i class="fa-solid fa-rotate-right"></i> להתחיל את השאלה מחדש';
+  fb.parentNode.insertBefore(b, fb.nextSibling);
+  b.addEventListener('click',function(){ onReset(); b.hidden=true; });
+  return b;
+}
+
+document.querySelectorAll('.quiz[data-type="mc"]').forEach(function(q){
+  var opts=[].slice.call(q.querySelectorAll('.opt'));
+  var fb=q.querySelector('.feedback');
+  var tried=[];
+  var retry=addRetry(q,function(){
+    opts.forEach(function(x){ x.classList.remove('wrong','correct'); });
+    tried=[]; fb.className='feedback'; fb.innerHTML='';
+  });
   opts.forEach(function(o){
     o.addEventListener('click',function(){
-      if(q.dataset.solved) return;                       // כבר נענתה נכון
-      if(o.classList.contains('wrong')) {                // מסיח שכבר נפסל — להזכיר למה
-        fb.className='feedback show no';
-        fb.innerHTML='<b>כבר בדקנו את התשובה הזאת.</b> '+(o.dataset.why||'');
-        return;
-      }
-      if(o.dataset.correct==='true'){
-        q.dataset.solved='1';
-        o.classList.add('correct');
+      var right = o.dataset.correct==='true';
+      opts.forEach(function(x){ x.classList.remove('correct'); });   // רק אחת מסומנת כנכונה בכל רגע
+      if(right){
+        o.classList.remove('wrong'); o.classList.add('correct');
         fb.className='feedback show ok';
-        fb.innerHTML='<b>✔ נכון'+(tries?', אחרי '+(tries+1)+' ניסיונות':'')+'.</b> '+(q.dataset.explain||'');
+        fb.innerHTML='<b>&#10004; נכון'+(tried.length?', אחרי '+(tried.length+1)+' ניסיונות':'')+'.</b> '
+                   + (o.dataset.why || q.dataset.explain || 'זו התשובה המדויקת לפי הכתוב.');
       }else{
-        tries++;
         o.classList.add('wrong');
-        var left=0; opts.forEach(function(x){ if(!x.classList.contains('wrong')) left++; });
-        var why=o.dataset.why||'התשובה הזאת אינה מתאימה למה שנאמר בפסוקים.';
+        if(tried.indexOf(o)<0) tried.push(o);
+        var left = opts.length - tried.length;
         fb.className='feedback show no';
-        fb.innerHTML='<b>✘ לא זו.</b> '+why+
-          (left>1?'<br><span style="opacity:.75">נשארו '+left+' אפשרויות. קראו שוב את השאלה ונסו שוב.</span>'
-                 :'<br><span style="opacity:.75">נשארה אפשרות אחת — סמנו אותה.</span>');
+        fb.innerHTML='<b>&#10008; לא זו.</b> '
+          + (o.dataset.why || 'התשובה הזאת אינה מתאימה למה שנאמר בכתוב.')
+          + (left>1 ? '<br><span style="opacity:.75">נשארו '+left+' אפשרויות. קראו שוב את השאלה ונסו שוב.</span>'
+                    : '<br><span style="opacity:.75">נשארה אפשרות אחת — סמנו אותה.</span>');
       }
+      retry.hidden=false;
     });
   });
 });
@@ -47,13 +58,14 @@ document.querySelectorAll('.quiz[data-type="fill"]').forEach(function(q){
   var raw=(q.dataset.answer||'').split('|');
   var answers=raw.map(norm);
   var tries=0;
+  var retry=addRetry(q,function(){ tries=0; inp.value=''; fb.className='feedback'; fb.innerHTML=''; inp.focus(); });
   function check(){
     var val=(inp.value||'').trim();
     if(!val){ fb.className='feedback show no'; fb.innerHTML='<b>כתבו תשובה</b> ואז לחצו "בדיקה".'; return; }
     if(answers.indexOf(norm(val))>-1){
       fb.className='feedback show ok';
-      fb.innerHTML='<b>✔ נכון'+(tries?', אחרי '+(tries+1)+' ניסיונות':'')+'.</b> '+(q.dataset.explain||'');
-      return;
+      fb.innerHTML='<b>&#10004; נכון'+(tries?', אחרי '+(tries+1)+' ניסיונות':'')+'.</b> '+(q.dataset.explain||'');
+      retry.hidden=false; return;
     }
     tries++;
     var a=raw[0].trim();
@@ -68,6 +80,7 @@ document.querySelectorAll('.quiz[data-type="fill"]').forEach(function(q){
       fb.innerHTML='<b>התשובה היא: '+a+'</b><br>'+(q.dataset.explain||'')+
         '<br><span style="opacity:.75">כדאי לחזור לפסוק ולראות מאיפה היא מגיעה.</span>';
     }
+    retry.hidden=false;
   }
   btn.addEventListener('click',check);
   inp.addEventListener('keydown',function(e){if(e.key==='Enter')check();});

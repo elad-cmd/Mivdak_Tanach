@@ -314,6 +314,13 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
   border-radius:var(--radius-sm);font-family:inherit;font-size:1.02rem;margin:4px 0 10px;resize:vertical;line-height:1.6;}
 .quiz textarea:focus{outline:none;border-color:var(--color-teal);box-shadow:0 0 0 3px var(--color-teal-bg);}
 .feedback.partial{background:var(--color-warning-bg);color:#7a5b08;}
+/* כפתור "להתחיל את השאלה מחדש" — מופיע אחרי שנענתה, נכון או לא */
+.retry{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:6px 14px;
+  border:1px solid var(--color-line);background:var(--color-bg);color:var(--color-muted);
+  border-radius:var(--radius-pill);font-family:inherit;font-size:.85rem;font-weight:700;cursor:pointer;
+  transition:background var(--transition-fast),color var(--transition-fast),border-color var(--transition-fast);}
+.retry:hover{background:var(--color-chip-bg);color:var(--color-ink);border-color:var(--color-teal);}
+.retry[hidden]{display:none;}
 .feedback .miss{color:#7a5b08;}
 
 /* טאבים לעמוד התרגול */
