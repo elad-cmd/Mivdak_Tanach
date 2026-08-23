@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>עיצוב — לחיץ מול לא לחיץ</title>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="psycho-components.css">
+<link rel="stylesheet" href="tanakh.css">
+<style>
+  .demo{max-width:960px;margin:0 auto;padding:30px 20px 60px}
+  .demo h2{font-family:var(--font-display);font-size:1.5rem;margin:34px 0 4px}
+  .demo p.note{color:var(--color-muted);margin:0 0 14px}
+  .box{background:var(--color-bg);border:1px solid var(--color-line);border-radius:var(--radius-lg);
+       padding:22px 24px;margin:12px 0;box-shadow:var(--shadow-sm)}
+  .box h3{font-size:1.05rem;margin:0 0 12px;color:var(--color-teal-dark)}
+  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .verdict{background:var(--color-yellow-light);border-inline-start:5px solid var(--color-yellow);
+           border-radius:var(--radius-md);padding:14px 18px;margin-top:10px}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="./"><span class="brand__logo">ת</span>
+      <span class="brand__name">מבדק תנ"ך<small>עמוד עיצוב — לא מופיע באתר</small></span></a>
+  </div>
+</header>
+
+<div class="demo">
+  <h1 class="section__title">לחיץ מול לא-לחיץ</h1>
+  <p class="note">עמוד פנימי להחלטה. בחר וריאנט ואני מחיל אותו על כל האתר.</p>
+
+  <h2>1 · דברים שהם לחיצים</h2>
+  <p class="note">הכלל המוצע: <b>צורת גלולה + צל תחתון תלת-ממדי + תגובת ריחוף</b>. עבור עליהם עם העכבר.</p>
+
+  <div class="box">
+    <h3>וריאנט א' — כל הטאבים צהובים כמו כפתור (כמו שהצעת)</h3>
+    <div class="row">
+      <a class="btn" href="#"><i class="fa-solid fa-map"></i> מפת המקומות</a>
+      <a class="btn" href="#">לציר הזמן</a>
+      <a class="btn" href="#">למפה שלנו</a>
+    </div>
+    <div class="row" style="margin-top:14px">
+      <a class="btn btn--sm" href="#">ציר זמן</a>
+      <a class="btn btn--sm" href="#">סיפורי היסוד</a>
+      <a class="btn btn--sm" href="#">יהושע</a>
+      <a class="btn btn--sm" href="#">שופטים</a>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>וריאנט ב' — צהוב לפעולה ראשית, טאב אפור לניווט והטאב הפעיל בטורקיז (אותו צל וריחוף לשניהם)</h3>
+    <div class="row">
+      <a class="btn" href="#"><i class="fa-solid fa-map"></i> מפת המקומות</a>
+      <a class="btn" href="#">לציר הזמן</a>
+      <a class="btn" href="#">למפה שלנו</a>
+    </div>
+    <div class="row" style="margin-top:14px">
+      <a class="tab tab--active" href="#">ציר זמן</a>
+      <a class="tab" href="#">סיפורי היסוד</a>
+      <a class="tab" href="#">יהושע</a>
+      <a class="tab" href="#">שופטים</a>
+    </div>
+  </div>
+
+  <h2>2 · דברים שהם רק הדגשה — לא לחיצים</h2>
+  <p class="note">נבחר <b>וריאנט א'</b>: טקסט עם נקודה, בלי מסגרת ובלי רקע. אין ריחוף, אין צל, ואין צורת גלולה — כלום לא מזמין לחיצה.</p>
+
+  <div class="box">
+    <h3>וריאנט א' — נבחר ✓</h3>
+    <div class="chips chips--static" style="justify-content:flex-start">
+      <span class="pill pill--md">שאלות פתוחות</span>
+      <span class="pill pill--md">רב-ברירה (אמריקאיות)</span>
+      <span class="pill pill--md">קלוז</span>
+      <span class="pill pill--md">השלמת משפטים</span>
+      <span class="pill pill--md">היגדים (נכון/לא נכון)</span>
+      <span class="pill pill--md">השוואה</span>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>וריאציה של אותו כלל — קיקר מעל כותרת</h3>
+    <p class="note">אותו רעיון במקום שבו התווית צריכה לשבת מעל כותרת ולא בשורה של תוויות (למשל ראשי הפרקים בתרגול, או "חלק 1 · 40%" בעמוד הבית).</p>
+    <h2 class="section__title" style="margin:0"><span class="section__kicker">חוקים חברתיים</span> ויקרא י״ט · מתוך נושאי הלימוד</h2>
+  </div>
+
+  <h2>3 · השוואה זו לצד זו</h2>
+  <div class="box">
+    <div class="row" style="gap:34px">
+      <div>
+        <div style="color:var(--color-muted);font-size:.85rem;margin-bottom:8px">כפתור — לחיץ</div>
+        <a class="btn" href="#">לחץ עליי</a>
+      </div>
+      <div>
+        <div style="color:var(--color-muted);font-size:.85rem;margin-bottom:8px">טאב — לחיץ, לא פעיל</div>
+        <a class="tab" href="#">יהושע</a>
+      </div>
+      <div>
+        <div style="color:var(--color-muted);font-size:.85rem;margin-bottom:8px">טאב — פעיל</div>
+        <a class="tab tab--active" href="#">יהושע</a>
+      </div>
+      <div>
+        <div style="color:var(--color-muted);font-size:.85rem;margin-bottom:8px">תווית — לא לחיץ</div>
+        <div class="chips chips--static" style="justify-content:flex-start"><span class="pill pill--md">רב-ברירה</span></div>
+      </div>
+    </div>
+    <div class="verdict">
+      <b>הכלל שנקבע:</b><br>
+      <b>צהוב</b> = תמיד כפתור. גלולה, צל תלת-ממדי, מתרומם בריחוף ונלחץ פנימה בקליק.<br>
+      <b>אפור עם טורקיז לנבחר</b> = טאבים. אותה גלולה ואותו צל, אבל אפור; הטאב הפעיל בטורקיז.<br>
+      <b>טקסט עם נקודה</b> = הדגשה בלבד. בלי רקע, בלי מסגרת, בלי צל ובלי ריחוף.
+    </div>
+  </div>
+</div>
+</body>
+</html>
