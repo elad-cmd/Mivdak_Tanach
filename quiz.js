@@ -219,5 +219,5 @@ document.querySelectorAll('.quiz[data-type="match"]').forEach(function(q){
   var hdr=document.querySelector('.site-header');
   function setTop(){ bar.style.top=((hdr?hdr.offsetHeight:0))+'px'; }
   setTop(); window.addEventListener('resize',setTop);
-  show(ids.indexOf("avot")>-1?"avot":ids[0]);
+  show(ids[0]);   // ברירת מחדל: הטאב הראשון בסרגל (בריאת העולם)
 })();
