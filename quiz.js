@@ -188,21 +188,17 @@ document.querySelectorAll('.quiz[data-type="match"]').forEach(function(q){
     else if(isGlobal){ /* גלובלי — תמיד מוצג */ }
     else if(cur){ panels[cur].push(node); }
   });
-  // מונה שאלות לכל נושא — באנר מתחת לכותרת הנושא (רשמיות + לתרגול)
+  // מונה שאלות לכל נושא — באנר מתחת לכותרת הנושא
   var qaOn=(getComputedStyle(document.documentElement).getPropertyValue("--qa-counts")||"").trim()!=="none";
   if(qaOn) ids.forEach(function(id){
     var quizzes=panels[id].filter(function(x){return x.classList&&x.classList.contains('quiz');});
     if(!quizzes.length) return;
-    var off=quizzes.filter(function(x){return x.classList.contains('is-official');}).length;
-    var add=quizzes.length-off;
     var title=document.getElementById(id);
     if(!title) return;
     var b=document.createElement('div');
     b.className='topic-count';
     b.style.cssText='display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:#eef6f3;border:1px solid #cfe6df;border-radius:12px;padding:10px 14px;margin:10px 0 16px;font-weight:600;color:#2f6f60';
-    b.innerHTML='<span><i class="fa-solid fa-list-check"></i> '+quizzes.length+' שאלות לתרגול:</span>'
-      +'<span class="quiz__tag quiz__tag--official">★ '+off+' שאלות רשמיות לדוגמה</span>'
-      +'<span class="quiz__tag quiz__tag--added">✎ '+add+' שאלות לתרגול</span>';
+    b.innerHTML='<span><i class="fa-solid fa-list-check"></i> '+quizzes.length+' שאלות לתרגול בנושא הזה</span>';
     if(title.nextSibling) title.parentNode.insertBefore(b,title.nextSibling); else title.parentNode.appendChild(b);
     panels[id].splice(panels[id].indexOf(title)+1,0,b);
   });
