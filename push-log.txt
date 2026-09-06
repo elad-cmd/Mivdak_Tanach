@@ -7,6 +7,5 @@ git version 2.55.0.windows.3
 --- fetch --- 
 From https://github.com/elad-cmd/Mivdak_Tanach
  * branch            main       -> FETCH_HEAD
-   568c91e..9e18daf  main       -> origin/main
 --- reset --soft to remote tip --- 
 --- add -A --- 

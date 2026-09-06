@@ -212,6 +212,32 @@ document.querySelectorAll('.quiz[data-type="match"]').forEach(function(q){
     window.scrollTo({top:0,behavior:'smooth'});
   }
   tabs.forEach(function(t){ t.addEventListener('click',function(){ show(t.dataset.target); }); });
+  // חצי ניווט גדולים בצדי סרגל הנושאים
+  (function(){
+    var inner=bar.querySelector('.tabbar__inner'); if(!inner) return;
+    var wrap=document.createElement('div'); wrap.className='tabbar__wrap';
+    bar.insertBefore(wrap,inner); wrap.appendChild(inner);
+    function mk(cls,icon,dir){
+      var b=document.createElement('button');
+      b.type='button'; b.className='tabnav '+cls; b.setAttribute('aria-label', dir<0?'הנושאים הקודמים':'הנושאים הבאים');
+      b.innerHTML='<i class="fa-solid '+icon+'"></i>';
+      b.addEventListener('click',function(){ inner.scrollBy({left:dir*Math.max(280,inner.clientWidth*0.7),behavior:'smooth'}); });
+      wrap.appendChild(b); return b;
+    }
+    var bStart=mk('tabnav--start','fa-chevron-right',1);   // RTL: ימינה = אחורה
+    var bEnd=mk('tabnav--end','fa-chevron-left',-1);
+    function upd(){
+      var max=inner.scrollWidth-inner.clientWidth-1;
+      var x=Math.abs(inner.scrollLeft);
+      bStart.disabled = x<=1;
+      bEnd.disabled = x>=max;
+      var hide = inner.scrollWidth<=inner.clientWidth+2;
+      bStart.style.display=bEnd.style.display = hide?'none':'';
+    }
+    inner.addEventListener('scroll',upd,{passive:true});
+    window.addEventListener('resize',upd);
+    setTimeout(upd,60); upd();
+  })();
   var hdr=document.querySelector('.site-header');
   function setTop(){ bar.style.top=((hdr?hdr.offsetHeight:0))+'px'; }
   setTop(); window.addEventListener('resize',setTop);
