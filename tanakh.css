@@ -557,10 +557,26 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 details.topic{border-top:1px solid var(--color-line);}
 details.topic summary{cursor:pointer;padding:11px 15px;font-weight:700;color:var(--color-ink);display:flex;align-items:center;gap:10px;list-style:none;}
 details.topic summary::-webkit-details-marker{display:none;}
-details.topic summary::after{content:"";width:9px;height:9px;border-left:2px solid var(--color-teal-dark);border-bottom:2px solid var(--color-teal-dark);transform:rotate(-45deg);margin-inline-start:auto;flex:none;transition:transform .2s ease;}
+details.topic summary::after{content:"";width:9px;height:9px;border-left:2px solid var(--color-teal-dark);border-bottom:2px solid var(--color-teal-dark);transform:rotate(-45deg);flex:none;transition:transform .2s ease;order:-1;}
 details.topic[open] summary::after{transform:rotate(135deg);}
 details.topic summary:hover{background:var(--color-bg-soft);}
 details.topic[open] summary{background:var(--color-bg-soft);}
 .topic__body{padding:2px 15px 14px;color:var(--color-ink-soft);font-size:.96rem;line-height:1.65;}
 .topic__body .topic__src{display:block;color:var(--color-teal-dark);font-weight:800;font-size:.82rem;margin-bottom:5px;}
 .topic__body p{margin:.35em 0 0;}
+
+/* קרא עוד — סיכום מורחב */
+details.topic summary{justify-content:flex-start;}
+.bookcard{max-width:820px;}
+.bookcard__head{justify-content:flex-start;}
+.topic__long{border-top:1px dashed var(--color-line);margin-top:12px;padding-top:12px;}
+.topic__long h4{font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:var(--color-ink);margin:14px 0 4px;}
+.topic__long h4:first-child{margin-top:0;}
+.topic__long p{margin:.4em 0;}
+.topic__long ul{margin:.4em 0 .4em 0;padding-inline-start:0;padding-inline-end:20px;}
+.topic__long li{margin:.25em 0;}
+.topic__long .q{background:var(--color-teal-bg);border-radius:var(--radius-md);padding:9px 13px;margin:.6em 0;font-weight:600;}
+button.readmore{margin-top:12px;background:var(--color-bg);border:1px solid var(--color-teal-dark);color:var(--color-teal-dark);
+  font-family:var(--font-sans);font-weight:700;font-size:.92rem;padding:7px 16px;border-radius:20px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;}
+button.readmore:hover{background:var(--color-teal-bg);}
+button.readmore.is-open{background:var(--color-teal-bg);}
