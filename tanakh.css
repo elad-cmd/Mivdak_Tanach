@@ -547,3 +547,20 @@ details.model p{margin:.6em 0 0;color:var(--color-ink-soft);}
 .topic-count{display:inline-flex;align-items:center;gap:7px;background:var(--color-teal-bg);
   color:var(--color-teal-dark);font-weight:800;font-size:.9rem;padding:5px 13px;
   border-radius:var(--radius-pill);margin:2px 0 12px;}
+
+/* ---------- סיפורי היסוד — כרטיסי ספרים + נושאים נפתחים ---------- */
+.bookgrid{display:grid;gap:14px;margin:16px 0;}
+.bookcard{border:1px solid var(--color-line);border-radius:var(--radius-md);overflow:hidden;background:var(--color-bg);box-shadow:var(--shadow-sm);}
+.bookcard__head{background:var(--color-teal-bg);padding:11px 15px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.bookcard__head b{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--color-ink);line-height:1.1;}
+.bookcard__head span{font-family:var(--font-sans);font-size:.85rem;font-weight:700;color:var(--color-teal-dark);}
+details.topic{border-top:1px solid var(--color-line);}
+details.topic summary{cursor:pointer;padding:11px 15px;font-weight:700;color:var(--color-ink);display:flex;align-items:center;gap:10px;list-style:none;}
+details.topic summary::-webkit-details-marker{display:none;}
+details.topic summary::after{content:"";width:9px;height:9px;border-left:2px solid var(--color-teal-dark);border-bottom:2px solid var(--color-teal-dark);transform:rotate(-45deg);margin-inline-start:auto;flex:none;transition:transform .2s ease;}
+details.topic[open] summary::after{transform:rotate(135deg);}
+details.topic summary:hover{background:var(--color-bg-soft);}
+details.topic[open] summary{background:var(--color-bg-soft);}
+.topic__body{padding:2px 15px 14px;color:var(--color-ink-soft);font-size:.96rem;line-height:1.65;}
+.topic__body .topic__src{display:block;color:var(--color-teal-dark);font-weight:800;font-size:.82rem;margin-bottom:5px;}
+.topic__body p{margin:.35em 0 0;}
